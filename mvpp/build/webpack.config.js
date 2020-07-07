@@ -1,42 +1,7 @@
-const config = require('./config');
-const path = require('path');
-const { entrys, htmlPluginList } = config;
+const production = require('./webpack.config.prod');
 
-/* TODO  测试：临时使用这种方式，之后会换成其它方式 */
-const buildPath = path.resolve(__dirname, '../dist')
+/**
+ * 在这里根据环境来选择使用哪个配置，甚至可以在这里做一些相关的干扰处理或者过滤、注入处理
+ */
 
-module.exports = {
-    /* 启动什么方式的调试地图 */
-    devtool: 'source-map',
-
-    /* 模块入口 */
-    entry: {
-        ...entrys
-    },
-
-    /* 模块编译后的输出 */
-    output: {
-        filename: '[name].[hash:10].js',
-        path: buildPath
-    },
-
-    /* 模块的处理方式 */
-    module: {
-        // rules: [
-        //     {
-        //         test: /\.js$/i,
-        //         exclude: /node_modules/,
-        //         loader: 'babel-loader',
-        //         /* 这里的babel 配置项之后会移动到配置文件中去 */
-        //         options: {
-        //             presets: ['@babel/preset-env']
-        //         }
-        //     }
-        // ]
-    },
-
-    /* 插件会对编译后的结果进行过滤 */
-    plugins: [
-        ...htmlPluginList
-    ]
-}
+module.exports = production;

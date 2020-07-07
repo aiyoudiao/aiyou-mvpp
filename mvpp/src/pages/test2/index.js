@@ -8,4 +8,6 @@
  * @FilePath: \webpack-m-pages\src\pages\test2\test2\index.js
  */
 
+import './index.scss';
+
 alert('test2')

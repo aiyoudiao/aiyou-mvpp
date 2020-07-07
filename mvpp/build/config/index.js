@@ -1,6 +1,17 @@
 const path = require('path');
 const { entrys } = require('./entrys');
 const htmlPluginList = require('./initHtmlWebpackPlugins');
+const commonRules = require('./rules');
+const cssRulesProd = require('./prod/initAllStyleLoader');
+const {
+    cssExtractor, postcssExtractor,
+    lessExtractor, sassExtractor,
+    scssExtractor, stylusExtractor,
+    stylExtractor, optimizeExtractor
+} = require('./prod/initAllStyleExtractor');
+// const cssRulesDev = require('./dev/initAllStyleLoader');
+const optimizeChunkPluginProd = require('./prod/initOptimizeChunkPlugin');
+const staticSourcePluginProd = require('./prod/initStaticSourcePlugin');
 
 
 const __DEV_MODE = process.env.NODE_ENV === 'development';
@@ -9,6 +20,7 @@ const __PRO_MODE = process.env.NODE_ENV === 'production';
 module.exports = {
     entrys,
     htmlPluginList,
+    commonRules,
 
     /* 编译后资源发布的根目录 */
     assetsRoot: '',
@@ -23,7 +35,16 @@ module.exports = {
 
     /* 生产环境下的变量 */
     prod: {
-        assetsPublicPath: ''
+        assetsPublicPath: '',
+        cssRulesProd,
+        optimizeChunkPluginProd,
+        staticSourcePluginProd,
+        cssExtractors: [
+            cssExtractor, postcssExtractor,
+            lessExtractor, sassExtractor,
+            scssExtractor, stylusExtractor,
+            stylExtractor, optimizeExtractor
+        ]
     },
 
     externals: {

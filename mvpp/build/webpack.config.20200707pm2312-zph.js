@@ -1,11 +1,13 @@
 const config = require('./config');
 const path = require('path');
-const { entrys, htmlPluginList, commonRules } = config;
+const { entrys, htmlPluginList } = config;
 
 /* TODO  测试：临时使用这种方式，之后会换成其它方式 */
 const buildPath = path.resolve(__dirname, '../dist')
 
-const webpackBaseConfig = {
+module.exports = {
+    /* 启动什么方式的调试地图 */
+    devtool: 'source-map',
 
     /* 模块入口 */
     entry: {
@@ -18,29 +20,23 @@ const webpackBaseConfig = {
         path: buildPath
     },
 
-
     /* 模块的处理方式 */
     module: {
-        rules: [
-            ...commonRules
-        ]
+        // rules: [
+        //     {
+        //         test: /\.js$/i,
+        //         exclude: /node_modules/,
+        //         loader: 'babel-loader',
+        //         /* 这里的babel 配置项之后会移动到配置文件中去 */
+        //         options: {
+        //             presets: ['@babel/preset-env']
+        //         }
+        //     }
+        // ]
     },
 
     /* 插件会对编译后的结果进行过滤 */
     plugins: [
         ...htmlPluginList
-    ],
-
-    /* 设置自定义模块解析 */
-    resolve: {
-        /* 别名 */
-        alias: {
-            '@': path.resolve(__dirname, './src'),
-        },
-        /* 文件查询扩展 */
-        extensions: ['.ts', '.js', '.tsx', '.jsx', '.json'],
-    },
-    externals: {},
+    ]
 }
-
-module.exports = webpackBaseConfig;

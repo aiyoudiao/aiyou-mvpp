@@ -28,8 +28,8 @@ htmlPluginOptionList.forEach(htmlPluginOption => {
             template,
             // chuckName: undefined,
             /* 后面会进行模块的分割，会提取出 default(自己的公共代码)模块和vendors(第三方依赖库的公共代码)模块 */
-            // chunks: [chunk, 'default', 'vendors'], 
-            chunks: [chunk],
+            chunks: [chunk, 'default', 'vendors'], 
+            // chunks: [chunk],
             inject: 'body'
         })
     )

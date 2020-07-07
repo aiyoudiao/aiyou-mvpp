@@ -1,23 +1,29 @@
 const eslintFriendlyFormatter = require('eslint-friendly-formatter')
+const path = require('path');
+const srcPath = path.resolve(__dirname, '../../../src/pages');
+// const srcPath = path.resolve(__dirname, '../../../src/pages').replace(/\\/gim, '/');
+const assetsSubDirectory = '/';
+const showEslintErrorsInOverlay = true;
+const useEslint = false;
 
 const ESLintRule = () => ({
     test: /\.(js|vue)$/,
     loader: 'eslint-loader',
     enforce: 'pre',                         // loader种类，pre / post
-    include: [config.srcPath],              // 检测的目录
+    include: [srcPath],              // 检测的目录
     options: {
         formatter: eslintFriendlyFormatter,    // 错误信息显示在终端上
         // 如果option设置为true，Loader将始终返回警告。如果您正在使用热模块更换，您可能希望在开发中启用此功能，否则在出现夹板错误时将跳过更新。
-        emitWarning: !config.dev.showEslintErrorsInOverlay,
+        emitWarning: !showEslintErrorsInOverlay,
     }
 })
 
 const commonRules = [
-    ...(config.dev.useEslint ? [ESLintRule()] : []),
+    ...(useEslint ? [ESLintRule()] : []),
     {
         test: /\.js$/,
-        include: [config.srcPath],        // 在源文件目录查询
-        exclude: [config.assetsSubDirectory],
+        include: [srcPath],        // 在源文件目录查询
+        exclude: [assetsSubDirectory],
         // exclude: /(node_modules|bower_components)/,
         use: [
                 {
@@ -31,8 +37,8 @@ const commonRules = [
     },
     {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        include: [config.srcPath],        // 在源文件目录查询
-        exclude: [config.assetsSubDirectory],    // 忽略第三方的任何代码
+        include: [srcPath],        // 在源文件目录查询
+        exclude: [assetsSubDirectory],    // 忽略第三方的任何代码
         use: [{ // 导入字体文件，并最打包到output.path+ options.name对应的路径中
             loader: 'url-loader',
             options: {
@@ -44,8 +50,8 @@ const commonRules = [
     },
     {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        include: [config.srcPath],               // 在源文件目录查询
-        // exclude: [config.assetsSubDirectory],    // 忽略第三方的任何代码
+        include: [srcPath],               // 在源文件目录查询
+        // exclude: [assetsSubDirectory],    // 忽略第三方的任何代码
         use: [{ // 图片文件小于8k时编译成dataUrl直接嵌入页面，超过8k回退使用file-loader
             loader: 'url-loader',
             options: {
