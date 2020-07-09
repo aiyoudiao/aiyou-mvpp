@@ -2,6 +2,8 @@ const path = require('path');
 const { entrys } = require('./entrys');
 const htmlPluginList = require('./initHtmlWebpackPlugins');
 const commonRules = require('./rules');
+
+// #region 生产环境数据
 const cssRulesProd = require('./prod/initAllStyleLoader');
 const {
     cssExtractor, postcssExtractor,
@@ -12,7 +14,17 @@ const {
 // const cssRulesDev = require('./dev/initAllStyleLoader');
 const optimizeChunkPluginProd = require('./prod/initOptimizeChunkPlugin');
 const staticSourcePluginProd = require('./prod/initStaticSourcePlugin');
+// #endregion
 
+
+// #region 开发环境数据
+const cssRulesDev = require('./dev/initAllStyleLoader');
+const {
+    definePlugin, namedModulesPlugin,
+    hotModuleReplacementPlugin, noEmitOnErrorsPlugin
+} = require('./dev/HotModuleReplacementPlugin');
+const devServer = require('./dev/devServer');
+// #endregion
 
 const __DEV_MODE = process.env.NODE_ENV === 'development';
 const __PRO_MODE = process.env.NODE_ENV === 'production';
@@ -30,7 +42,13 @@ module.exports = {
 
     /* 开发环境下的变量 */
     dev: {
-        assetsPublicPath: ''
+        assetsPublicPath: '',
+        cssRulesDev,
+        hotModuleReplacementPlugins: [
+            definePlugin, namedModulesPlugin,
+            hotModuleReplacementPlugin, noEmitOnErrorsPlugin
+        ],
+        devServer,
     },
 
     /* 生产环境下的变量 */

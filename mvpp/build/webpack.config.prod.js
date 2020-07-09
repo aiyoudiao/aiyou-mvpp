@@ -14,6 +14,7 @@ const webpackProdConfig = {
     devtool: 'source-map',
     output: {
         filename: 'js/[name].[chunkhash:8].bundle.js',
+        chunkFilename: 'js/[id].[chunkhash:7].js', 
         publicPath: process.env.PUBLIC_PATH || assetsPublicPath || '/',
     },
     module: {

@@ -126,3 +126,8 @@ npm i -D eslint-friendly-formatter
 extract-text-webpack-plugin目前版本不支持webpack4
 改用next，虽然目前处于内部测试版本，但是已经很好用了，如果之后再找到其它替代品，再说。
 npm install extract-text-webpack-plugin@next​​​​​​​
+
+### 20200709pm2242 zph change
+
+npm i -D webpack-dev-server
++ webpack-dev-server@3.11.0

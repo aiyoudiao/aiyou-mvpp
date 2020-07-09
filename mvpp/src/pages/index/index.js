@@ -8,4 +8,4 @@
  * @FilePath: \webpack-m-pages\src\pages\test2\test2\index.js
  */
 import './index.css'
-alert('index')
+alert('index2')

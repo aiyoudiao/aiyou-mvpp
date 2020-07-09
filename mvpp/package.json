@@ -4,8 +4,11 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "webpack --config build/webpack.config.js",
-    "debuger-config": "node --inspect-brk build/webpack.config.js"
+    "debuger-config": "node --inspect-brk build/webpack.config.js",
+    "build": "webpack --config build/webpack.config.prod.js",
+    "debuger-config:prod": "node --inspect-brk build/webpack.config.prod.js",
+    "dev": "webpack-dev-server --progress --color --config build/webpack.config.dev.js",
+    "debuger-config:dev": "node --inspect-brk build/webpack.config.dev.js"
   },
   "keywords": [],
   "author": "哎哟迪奥",
@@ -91,6 +94,7 @@
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {},

@@ -31,5 +31,19 @@
 ## 构建流程
 
 
+## 构建问题
+
+### 开发环境下的问题
+
+问题一：文件不能使用hash命名
+
+```
+ERROR in chunk test2/index [entry]
+js/[name].[chunkhash:8].bundle.js
+Cannot use [chunkhash] or [contenthash] for chunk in 'js/[name].[chunkhash:8].bundle.js' (use [hash] instead)
+```
+
+原因：热替换影响了chunkhash的使用，你要确保hotModuleReplacementPlugin(）函数没在生产环境下执行
+
 
 

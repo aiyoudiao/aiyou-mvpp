@@ -1,9 +1,14 @@
 
+const assetsPublicPath = "/";
+const host = "localhost";
+const port = "3002";
+const path = require('path');
+
 const devServer =
 {                       // 启动devServer，不会在本地生成文件，所有文件会编译在内存中(读取速度快)
     open: false,
-    host: config.dev.host,
-    port: config.dev.port,
+    host: host,
+    port: port,
     useLocalIp: false,                  // 允许浏览器使用本地IP打开
 
     hot: true,                         // 配合webpack.NamedModulesPlugin、webpack.HotModuleReplacementPlugin完成MHR
@@ -16,10 +21,27 @@ const devServer =
     clientLogLevel: "warning",         // 内联模式 哪些构建消息将会出现在浏览器控制台
 
     historyApiFallback: {              // 当使用 HTML5 History API 时，任意的 404 响应是否需要被替代为 index.html。
+        htmlAcceptHeaders: ['text/html', 'application/xhtml+xml'],
         rewrites: [
-            { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
+            // { 
+            //     from: /.*/, 
+            //     to: path.posix.join(assetsPublicPath, 'index.html') 
+            // },
+            {
+                from: /^\/([\W\w]+)/, // 规则 正则
+                to: function(context) { // 通过一个函数来进行处理
+                    console.log(context)
+                    console.log("context.match[1]：", context.match[1])
+                    console.log("请求路径资源", '/pages/' + context.match[1])
+                    return '/pages/' + context.match[1]
+                }
+            },
         ],
     },
-    publicPath: config.dev.assetsPublicPath,
-    proxy: config.dev.proxyTable,
+    publicPath: assetsPublicPath,
+    proxy: {
+        '/api': 'http://localhost:3000'
+    },
 };
+
+module.exports = devServer;
