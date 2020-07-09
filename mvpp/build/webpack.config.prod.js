@@ -15,7 +15,7 @@ const webpackProdConfig = {
     output: {
         filename: 'js/[name].[chunkhash:8].bundle.js',
         chunkFilename: 'js/[id].[chunkhash:7].js', 
-        publicPath: process.env.PUBLIC_PATH || assetsPublicPath || '/',
+        publicPath: process.env.PUBLIC_PATH || assetsPublicPath || '/', /* js 和 html 的路径 */
     },
     module: {
         rules: [

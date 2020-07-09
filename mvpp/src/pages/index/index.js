@@ -9,3 +9,15 @@
  */
 import './index.css'
 alert('index2')
+
+class Test1 {
+    constructor () {
+        this.alert('index3');
+    }
+
+    alert(tips) {
+        window.alert(tips);
+    }
+}
+
+new Test1();

@@ -21,8 +21,7 @@ const cssRules = [
             use: [
                 { loader: 'css-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'postcss-loader', options: { sourceMap: prodSourceMap } },
-            ],
-            publicPath: '../',       // 默认发布路径会是css，会拼接成css/img/x.png，所以需要重置
+            ]
         })
     },
     {
@@ -34,8 +33,7 @@ const cssRules = [
             use: [
                 { loader: 'css-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'postcss-loader', options: { sourceMap: prodSourceMap } }
-            ],
-            publicPath: '../',       // 默认发布路径会是css，会拼接成css/img/x.png，所以需要重置
+            ]
         })
     },
     {
@@ -48,8 +46,7 @@ const cssRules = [
                 { loader: 'css-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'postcss-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'less-loader', options: { sourceMap: prodSourceMap } }
-            ],
-            publicPath: '../',       // 默认发布路径会是css，会拼接成css/img/x.png，所以需要重置
+            ]
         })
     },
     {
@@ -62,8 +59,7 @@ const cssRules = [
                 { loader: 'css-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'postcss-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'sass-loader', options: { indentedSyntax: true, sourceMap: prodSourceMap } }
-            ],
-            publicPath: '../',       // 默认发布路径会是css，会拼接成css/img/x.png，所以需要重置
+            ]
         })
     },
     {
@@ -76,8 +72,7 @@ const cssRules = [
                 { loader: 'css-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'postcss-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'sass-loader', options: { sourceMap: prodSourceMap } }
-            ],
-            publicPath: '../',      // 默认发布路径会是css，会拼接成css/img/x.png，所以需要重置
+            ]
         })
     },
     {
@@ -90,8 +85,7 @@ const cssRules = [
                 { loader: 'css-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'postcss-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'stylus-loader', options: { sourceMap: prodSourceMap } }
-            ],
-            publicPath: '../',      // 默认发布路径会是css，会拼接成css/img/x.png，所以需要重置
+            ]
         })
     },
     {
@@ -104,8 +98,7 @@ const cssRules = [
                 { loader: 'css-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'postcss-loader', options: { sourceMap: prodSourceMap } },
                 { loader: 'stylus-loader', options: { sourceMap: prodSourceMap } }
-            ],
-            publicPath: '../',      // 默认发布路径会是css，会拼接成css/img/x.png，所以需要重置
+            ]
         })
     }
 ]

@@ -46,4 +46,15 @@ Cannot use [chunkhash] or [contenthash] for chunk in 'js/[name].[chunkhash:8].bu
 原因：热替换影响了chunkhash的使用，你要确保hotModuleReplacementPlugin(）函数没在生产环境下执行
 
 
+### 注意事项
 
+注意事项一：
+打包的虚拟路径使用的统一变量是：publicPath 或者 assetsPublicPath。
+虚拟路径是不是打包后的物理路径。
+打包后的物理路径是：name 或者 filename。
+
+注意事项二：
+加入file-loader 和 url-loader后，`${}`的使用会受限制。
+因为这么做会使用到esmodule语法比如 ${require('./static/images/index.jpeg')}，之后会对这个图片资源进行处理并且打包。
+**这种操作方式在低版本会有，但是在高版本就没有了，比如2中有，4中就没有了**
+现在是css中引入图片的问题解决了，但是页面中引入图片的问题还没有解决。

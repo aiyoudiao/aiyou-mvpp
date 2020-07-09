@@ -14,7 +14,8 @@
   "author": "哎哟迪奥",
   "license": "MPL-2",
   "browserslist": [
-    "last 2 versions", "not ie <= 8"
+    "> 1%",
+    "last 2 versions"
   ],
   "devDependencies": {
     "@babel/cli": "^7.10.3",

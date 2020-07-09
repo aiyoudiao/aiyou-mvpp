@@ -1,8 +1,9 @@
 const eslintFriendlyFormatter = require('eslint-friendly-formatter')
 const path = require('path');
-const srcPath = path.resolve(__dirname, '../../../src/pages');
+const srcPath = path.resolve(__dirname, '../../src/pages');
 // const srcPath = path.resolve(__dirname, '../../../src/pages').replace(/\\/gim, '/');
 const assetsSubDirectory = '/';
+const assetsPublicPath = '';
 const showEslintErrorsInOverlay = true;
 const useEslint = false;
 
@@ -21,18 +22,14 @@ const ESLintRule = () => ({
 const commonRules = [
     ...(useEslint ? [ESLintRule()] : []),
     {
-        test: /\.js$/,
+        test: /(\.jsx|\.js|\.ts|\.tsx)$/,
         include: [srcPath],        // 在源文件目录查询
         exclude: [assetsSubDirectory],
         // exclude: /(node_modules|bower_components)/,
         use: [
-                {
-                    loader: 'babel-loader',
-                    // options: {
-                    //     presets: ['@babel/preset-env'],
-                    //     plugins: ['@babel/plugin-transform-runtime'],
-                    // },
-                },
+            {
+                loader: 'babel-loader'
+            },
         ]
     },
     {
@@ -45,19 +42,21 @@ const commonRules = [
                 limit: 8192,
                 name: 'fonts/[name].[hash:7].[ext]',
                 fallback: 'file-loader',
+                publicPath: process.env.PUBLIC_PATH || assetsPublicPath || '/',
             }
         }]
     },
     {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        include: [srcPath],               // 在源文件目录查询
-        // exclude: [assetsSubDirectory],    // 忽略第三方的任何代码
+        include: [srcPath],        // 在源文件目录查询
+        exclude: [assetsSubDirectory],
         use: [{ // 图片文件小于8k时编译成dataUrl直接嵌入页面，超过8k回退使用file-loader
             loader: 'url-loader',
             options: {
                 limit: 8192, // 8k
                 name: 'images/[name].[hash:7].[ext]', // 回退使用file-loader时的名称
                 fallback: 'file-loader',  // 当超过8192byte时，会回退使用file-loader
+                publicPath: process.env.PUBLIC_PATH || assetsPublicPath || '/',
             }
         }]
     },
@@ -68,6 +67,7 @@ const commonRules = [
             limit: 8192,
             name: 'media/[name].[hash:7].[ext]',
             fallback: 'file-loader',
+            publicPath: process.env.PUBLIC_PATH || assetsPublicPath || '/',
         }
     },
 ]
