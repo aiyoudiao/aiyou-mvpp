@@ -7,7 +7,8 @@ const { prod: { assetsPublicPath, cssRulesProd, optimizeChunkPluginProd, staticS
 
 
 const webpackProdConfig = {
-    mode: "production",
+    // mode: "production",
+    mode: 'development',
     stats: {
         colors: true,
     },
@@ -16,6 +17,12 @@ const webpackProdConfig = {
         filename: 'js/[name].[chunkhash:8].bundle.js',
         chunkFilename: 'js/[id].[chunkhash:7].js', 
         publicPath: process.env.PUBLIC_PATH || assetsPublicPath || '/', /* js 和 html 的路径 */
+/*         // export to AMD, CommonJS, or window
+        libraryTarget: 'umd',
+        // // the name exported to window
+        library: 'umd' */
+
+
     },
     module: {
         rules: [

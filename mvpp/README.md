@@ -131,3 +131,44 @@ npm install extract-text-webpack-plugin@next​​​​​​​
 
 npm i -D webpack-dev-server
 + webpack-dev-server@3.11.0
+
+### 20200711pm1259 zph 
+编写loader，将aiyou-ui项目使用mvpp来完成编译，同时也添加一个最新的源loader。
+主要是对比这两个loader的效果，从而能够取这两个loader之间的优点处。
+如果OK，我会把作者的项目fork下来，然后提pull request。
+
+npm i -D underscore-template-loader
++ underscore-template-loader@1.1.0
+
+### 20200711pm1911 zph
+
+无论是aiyou-template-loader 还是 underscore-template-loader，都不能在页面中引入图片，让图片进行打包
+所以加入了以下loader的尝试
+
+html-url-loader  这个loader可以让引入的图片被打包，但是输出的内容有问题，是一个json
+html-withimg-loader 这个和上面的一样
+
+应该是因为webpack版本的问题吧。所以针对这个问题调试了一下html-url-loader，把这个问题解决了
+
+但是 很明显 aiyou-template-loader 和 html-url-loader不能兼容，
+同时underscore-template-loader 也不能和 html-url-loader 兼容。
+
+所以分别研究一下。
+
+
+### 20200711pm2154
+
+html-url-loader 给作者提一个pull request
+underscore-template-loader 也给作者提一个pull request
+
+问题解决了，结合html-url-loader 把 aiyou-template-loader修改了，可以打包图片了。
+
+### 20200711pm2304
+
+html-url-loader 的pull request 已经提交了。
+
+underscore-template-loader 的pull request 提交不了，但是我创建了一个Issues，
+告诉作者我改了这些，如果它自己知道改也行。
+
+如果三天没有得到回复或者npm上没有更新，那我就把它们改个名字，自己提交到github上和npm上去，不然我用不了嘞。
+

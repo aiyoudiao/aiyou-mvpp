@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
+    @require(<%'./@my-component/core/header.html'%>, <%{title: 'layedit'}%>)
+    <link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
 </head>
 
 <body>
-    index
+    @br(2)
     <div class="test">
         
     </div>

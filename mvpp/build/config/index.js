@@ -2,6 +2,8 @@ const path = require('path');
 const { entrys } = require('./entrys');
 const htmlPluginList = require('./initHtmlWebpackPlugins');
 const commonRules = require('./rules');
+const commonMarcros = require('./marcros');
+
 
 // #region 生产环境数据
 const cssRulesProd = require('./prod/initAllStyleLoader');
@@ -33,7 +35,8 @@ module.exports = {
     entrys,
     htmlPluginList,
     commonRules,
-
+    commonMarcros,
+    
     /* 编译后资源发布的根目录 */
     assetsRoot: '',
 

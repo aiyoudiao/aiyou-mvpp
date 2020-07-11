@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      "underscore-template-loader@1.0.0",
+      "D:\\work\\nantian\\web\\project\\jingmingyunying\\web-front-end"
+    ]
+  ],
+  "_development": true,
+  "_from": "underscore-template-loader@1.0.0",
+  "_id": "underscore-template-loader@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-4IU+5IUNIuAIl8RjjzYDasCMDX4=",
+  "_location": "/underscore-template-loader",
+  "_phantomChildren": {
+    "big.js": "3.2.0",
+    "emojis-list": "2.1.0",
+    "json5": "0.5.1",
+    "object-assign": "4.1.1"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "underscore-template-loader@1.0.0",
+    "name": "underscore-template-loader",
+    "escapedName": "underscore-template-loader",
+    "rawSpec": "1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "1.0.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/underscore-template-loader/download/underscore-template-loader-1.0.0.tgz",
+  "_spec": "1.0.0",
+  "_where": "D:\\work\\nantian\\web\\project\\jingmingyunying\\web-front-end",
+  "author": {
+    "name": "Emmanuel Antico",
+    "email": "emmanuel.antico@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/emaphp/underscore-template-loader/issues"
+  },
+  "contributors": [
+    {
+      "name": "Tommy Dugger",
+      "url": "cerinman"
+    },
+    {
+      "name": "Kees Kluskens",
+      "url": "SpaceK33z"
+    },
+    {
+      "name": "Pascal",
+      "url": "pascalpp"
+    },
+    {
+      "name": "Jan Nicklas",
+      "url": "jantimon"
+    },
+    {
+      "name": "Keith McKnight",
+      "url": "kmck"
+    }
+  ],
+  "dependencies": {
+    "fastparse": "^1.1.1",
+    "loader-utils": "^0.2.11"
+  },
+  "description": "An Underscore and Lodash template loader for Webpack",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-string": "^1.1.2",
+    "istanbul": "^0.3.18",
+    "mocha": "^2.2.5",
+    "underscore": "^1.8.3"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    }
+  },
+  "homepage": "https://github.com/emaphp/underscore-template-loader",
+  "keywords": [
+    "underscore",
+    "lodash",
+    "template",
+    "webpack",
+    "loader"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "underscore-template-loader",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emaphp/underscore-template-loader.git"
+  },
+  "scripts": {
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha",
+    "test": "mocha"
+  },
+  "version": "1.0.0"
+}

@@ -7,6 +7,7 @@
     "debuger-config": "node --inspect-brk build/webpack.config.js",
     "build": "webpack --config build/webpack.config.prod.js",
     "debuger-config:prod": "node --inspect-brk build/webpack.config.prod.js",
+    "debuger-config:webpackprod": "node --inspect-brk ./node_modules/webpack/lib/webpack.js --config  ./build/webpack.config.prod.js",
     "dev": "webpack-dev-server --progress --color --config build/webpack.config.dev.js",
     "debuger-config:dev": "node --inspect-brk build/webpack.config.dev.js"
   },
@@ -14,7 +15,8 @@
   "author": "哎哟迪奥",
   "license": "MPL-2",
   "browserslist": [
-    "last 2 versions", "not ie <= 8"
+    "last 2 versions",
+    "not ie <= 8"
   ],
   "devDependencies": {
     "@babel/cli": "^7.10.3",
@@ -62,6 +64,7 @@
     "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
     "html-webpack-plugin": "^4.3.0",
+    "html-withimg-loader": "^0.1.16",
     "jest": "^26.1.0",
     "less": "^3.11.3",
     "less-loader": "^6.2.0",
@@ -90,6 +93,7 @@
     "ts-loader": "^7.0.5",
     "tslib": "^2.0.0",
     "typescript": "^3.9.6",
+    "underscore-template-loader": "^1.1.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
