@@ -23,18 +23,18 @@ const devServer =
     historyApiFallback: {              // 当使用 HTML5 History API 时，任意的 404 响应是否需要被替代为 index.html。
         htmlAcceptHeaders: ['text/html', 'application/xhtml+xml'],
         rewrites: [
-            // { 
-            //     from: /.*/, 
-            //     to: path.posix.join(assetsPublicPath, 'index.html') 
+            // {
+            //     from: /^\/([\W\w]+)/, // 规则 正则
+            //     to: function(context) { // 通过一个函数来进行处理
+            //         // console.log(context)
+            //         // console.log("context.match[1]：", context.match[1])
+            //         console.log("请求路径资源", '/pages/' + context.match[1])
+            //         return '/pages/' + context.match[1]
+            //     }
             // },
-            {
-                from: /^\/([\W\w]+)/, // 规则 正则
-                to: function(context) { // 通过一个函数来进行处理
-                    console.log(context)
-                    console.log("context.match[1]：", context.match[1])
-                    console.log("请求路径资源", '/pages/' + context.match[1])
-                    return '/pages/' + context.match[1]
-                }
+            { 
+                from: /.{0}/, 
+                to: path.posix.join(assetsPublicPath, '/pages/index.html') 
             },
         ],
     },

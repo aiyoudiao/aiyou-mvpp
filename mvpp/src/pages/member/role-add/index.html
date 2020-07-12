@@ -1,0 +1,58 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:07:00
+ * @LastEditTime: 2020-01-21 20:50:46
+ * @LastEditors: ilovejwl
+ -->
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:07:00
+ * @LastEditTime: 2020-01-21 20:50:07
+ * @LastEditors: ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	@require(<%'./@my-component/core/header.html'%>, <%{title: '添加角色'}%>)
+	<link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)" >
+	<script type="text/javascript" src="@request(<%'/static/lib/loading/okLoading.js'%>)"></script>
+</head>
+<body>
+<div class="ok-body">
+	<!--form表单-->
+	<form class="layui-form layui-form-pane ok-form">
+		<div class="layui-form-item">
+			<label class="layui-form-label">角色名</label>
+			<div class="layui-input-block">
+				<input type="text" name="name" placeholder="请输入角色名" autocomplete="off" class="layui-input"
+				       lay-verify="required">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">备注</label>
+			<div class="layui-input-block">
+				<input type="text" name="remarks" placeholder="请输入备注" autocomplete="off" class="layui-input"
+				       lay-verify="required">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">权限</label>
+			<div class="layui-input-block">
+				<div id="permissionTree"></div>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<div class="layui-input-block">
+				<button class="layui-btn" lay-submit lay-filter="add">立即提交</button>
+				<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+			</div>
+		</div>
+	</form>
+</div>
+@require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+</html>

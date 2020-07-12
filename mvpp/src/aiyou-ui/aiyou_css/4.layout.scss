@@ -1,0 +1,200 @@
+/* 4 */
+@import './common/contrant.scss';
+
+
+/* 基本布局 */
+.#{$HOST}-main{position: relative; width: 1140px; margin: 0 auto;}
+.#{$HOST}-header{position: relative; z-index: 1000; height: 60px;}
+.#{$HOST}-header a:hover{transition: all .5s; -webkit-transition: all .5s;}
+.#{$HOST}-side{position: fixed; left: 0; top: 0; bottom: 0; z-index: 999; width: 200px; overflow-x: hidden;}
+.#{$HOST}-side-scroll{position: relative; width: 220px; height: 100%; overflow-x: hidden;}
+.#{$HOST}-body{position: absolute; left: 200px; right: 0; top: 0; bottom: 0; z-index: 998; width: auto; overflow: hidden; overflow-y: auto; box-sizing: border-box;}
+
+/* 后台框架大布局 */.#{$HOST}-layout-body{overflow: hidden;}
+.#{$HOST}-layout-admin .#{$HOST}-header{background-color: #23262E;}
+.#{$HOST}-layout-admin .#{$HOST}-side{top: 60px; width: 200px; overflow-x: hidden;}
+.#{$HOST}-layout-admin .#{$HOST}-body{position: fixed; top: 60px; bottom: 44px;}
+.#{$HOST}-layout-admin .#{$HOST}-main{width: auto; margin: 0 15px;}
+.#{$HOST}-layout-admin .#{$HOST}-footer{position: fixed; left: 200px; right: 0; bottom: 0; height: 44px; line-height: 44px; padding: 0 15px; background-color: #eee;}
+.#{$HOST}-layout-admin .#{$HOST}-logo{position: absolute; left: 0; top: 0; width: 200px; height: 100%; line-height: 60px; text-align: center; color: #009688; font-size: 16px;}
+.#{$HOST}-layout-admin .#{$HOST}-header .#{$HOST}-nav{background: none;}
+.#{$HOST}-layout-left{position: absolute !important; left: 200px; top: 0;}
+.#{$HOST}-layout-right{position: absolute !important; right: 0; top: 0;}
+
+/* 栅格布局 */
+.#{$HOST}-container{position: relative; margin: 0 auto; padding: 0 15px; box-sizing: border-box;}
+.#{$HOST}-fluid{position: relative; margin: 0 auto; padding: 0 15px;}
+
+.#{$HOST}-row:before, .#{$HOST}-row:after{content: ''; display: block; clear: both;}
+.#{$HOST}-col-xs1, .#{$HOST}-col-xs2, .#{$HOST}-col-xs3, .#{$HOST}-col-xs4, .#{$HOST}-col-xs5, .#{$HOST}-col-xs6, .#{$HOST}-col-xs7, .#{$HOST}-col-xs8, .#{$HOST}-col-xs9, .#{$HOST}-col-xs10, .#{$HOST}-col-xs11, .#{$HOST}-col-xs12
+,.#{$HOST}-col-sm1, .#{$HOST}-col-sm2, .#{$HOST}-col-sm3, .#{$HOST}-col-sm4, .#{$HOST}-col-sm5, .#{$HOST}-col-sm6, .#{$HOST}-col-sm7, .#{$HOST}-col-sm8, .#{$HOST}-col-sm9, .#{$HOST}-col-sm10, .#{$HOST}-col-sm11, .#{$HOST}-col-sm12
+,.#{$HOST}-col-md1, .#{$HOST}-col-md2, .#{$HOST}-col-md3, .#{$HOST}-col-md4, .#{$HOST}-col-md5, .#{$HOST}-col-md6, .#{$HOST}-col-md7, .#{$HOST}-col-md8, .#{$HOST}-col-md9, .#{$HOST}-col-md10, .#{$HOST}-col-md11, .#{$HOST}-col-md12
+,.#{$HOST}-col-lg1, .#{$HOST}-col-lg2, .#{$HOST}-col-lg3, .#{$HOST}-col-lg4, .#{$HOST}-col-lg5, .#{$HOST}-col-lg6, .#{$HOST}-col-lg7, .#{$HOST}-col-lg8, .#{$HOST}-col-lg9, .#{$HOST}-col-lg10, .#{$HOST}-col-lg11, .#{$HOST}-col-lg12
+{position: relative; display: block; box-sizing: border-box;}
+
+.#{$HOST}-col-xs1, .#{$HOST}-col-xs2, .#{$HOST}-col-xs3, .#{$HOST}-col-xs4, .#{$HOST}-col-xs5, .#{$HOST}-col-xs6, .#{$HOST}-col-xs7, .#{$HOST}-col-xs8, .#{$HOST}-col-xs9, .#{$HOST}-col-xs10, .#{$HOST}-col-xs11, .#{$HOST}-col-xs12{float: left;}
+.#{$HOST}-col-xs1{width: 8.33333333%;}
+.#{$HOST}-col-xs2{width: 16.66666667%;}
+.#{$HOST}-col-xs3{width: 25%;}
+.#{$HOST}-col-xs4{width: 33.33333333%;}
+.#{$HOST}-col-xs5{width: 41.66666667%;}
+.#{$HOST}-col-xs6{width: 50%;}
+.#{$HOST}-col-xs7{width: 58.33333333%;}
+.#{$HOST}-col-xs8{width: 66.66666667%;}
+.#{$HOST}-col-xs9{width: 75%;}
+.#{$HOST}-col-xs10{width: 83.33333333%;}
+.#{$HOST}-col-xs11{width: 91.66666667%;}
+.#{$HOST}-col-xs12{width: 100%;}
+
+.#{$HOST}-col-xs-offset1{margin-left: 8.33333333%;}
+.#{$HOST}-col-xs-offset2{margin-left: 16.66666667%;}
+.#{$HOST}-col-xs-offset3{margin-left: 25%;}
+.#{$HOST}-col-xs-offset4{margin-left: 33.33333333%;}
+.#{$HOST}-col-xs-offset5{margin-left: 41.66666667%;}
+.#{$HOST}-col-xs-offset6{margin-left: 50%;}
+.#{$HOST}-col-xs-offset7{margin-left: 58.33333333%;}
+.#{$HOST}-col-xs-offset8{margin-left: 66.66666667%;}
+.#{$HOST}-col-xs-offset9{margin-left: 75%;}
+.#{$HOST}-col-xs-offset10{margin-left: 83.33333333%;}
+.#{$HOST}-col-xs-offset11{margin-left: 91.66666667%;}
+.#{$HOST}-col-xs-offset12{margin-left: 100%;}
+
+/* 超小屏幕(手机) */
+@media screen and (max-width: 768px) {
+  .#{$HOST}-hide-xs{display: none!important;}
+  .#{$HOST}-show-xs-block{display: block!important;}
+  .#{$HOST}-show-xs-inline{display: inline!important;}
+  .#{$HOST}-show-xs-inline-block{display: inline-block!important;}
+}
+
+/* 小型屏幕(平板) */
+@media screen and (min-width: 768px) {
+  .#{$HOST}-container{width: 750px;}
+  .#{$HOST}-hide-sm{display: none!important;}
+  .#{$HOST}-show-sm-block{display: block!important;}
+  .#{$HOST}-show-sm-inline{display: inline!important;}
+  .#{$HOST}-show-sm-inline-block{display: inline-block!important;}
+
+  .#{$HOST}-col-sm1, .#{$HOST}-col-sm2, .#{$HOST}-col-sm3, .#{$HOST}-col-sm4, .#{$HOST}-col-sm5, .#{$HOST}-col-sm6, .#{$HOST}-col-sm7, .#{$HOST}-col-sm8, .#{$HOST}-col-sm9, .#{$HOST}-col-sm10, .#{$HOST}-col-sm11, .#{$HOST}-col-sm12{float: left;}
+  .#{$HOST}-col-sm1{width: 8.33333333%;}
+  .#{$HOST}-col-sm2{width: 16.66666667%;}
+  .#{$HOST}-col-sm3{width: 25%;}
+  .#{$HOST}-col-sm4{width: 33.33333333%;}
+  .#{$HOST}-col-sm5{width: 41.66666667%;}
+  .#{$HOST}-col-sm6{width: 50%;}
+  .#{$HOST}-col-sm7{width: 58.33333333%;}
+  .#{$HOST}-col-sm8{width: 66.66666667%;}
+  .#{$HOST}-col-sm9{width: 75%;}
+  .#{$HOST}-col-sm10{width: 83.33333333%;}
+  .#{$HOST}-col-sm11{width: 91.66666667%;}
+  .#{$HOST}-col-sm12{width: 100%;}
+  /* 列偏移 */
+  .#{$HOST}-col-sm-offset1{margin-left: 8.33333333%;}
+  .#{$HOST}-col-sm-offset2{margin-left: 16.66666667%;}
+  .#{$HOST}-col-sm-offset3{margin-left: 25%;}
+  .#{$HOST}-col-sm-offset4{margin-left: 33.33333333%;}
+  .#{$HOST}-col-sm-offset5{margin-left: 41.66666667%;}
+  .#{$HOST}-col-sm-offset6{margin-left: 50%;}
+  .#{$HOST}-col-sm-offset7{margin-left: 58.33333333%;}
+  .#{$HOST}-col-sm-offset8{margin-left: 66.66666667%;}
+  .#{$HOST}-col-sm-offset9{margin-left: 75%;}
+  .#{$HOST}-col-sm-offset10{margin-left: 83.33333333%;}
+  .#{$HOST}-col-sm-offset11{margin-left: 91.66666667%;}
+  .#{$HOST}-col-sm-offset12{margin-left: 100%;}
+}
+/* 中型屏幕(桌面) */
+@media screen and (min-width: 992px) {
+  .#{$HOST}-container{width: 970px;}
+  .#{$HOST}-hide-md{display: none!important;}
+  .#{$HOST}-show-md-block{display: block!important;}
+  .#{$HOST}-show-md-inline{display: inline!important;}
+  .#{$HOST}-show-md-inline-block{display: inline-block!important;}
+  
+  .#{$HOST}-col-md1, .#{$HOST}-col-md2, .#{$HOST}-col-md3, .#{$HOST}-col-md4, .#{$HOST}-col-md5, .#{$HOST}-col-md6, .#{$HOST}-col-md7, .#{$HOST}-col-md8, .#{$HOST}-col-md9, .#{$HOST}-col-md10, .#{$HOST}-col-md11, .#{$HOST}-col-md12{float: left;}
+  .#{$HOST}-col-md1{width: 8.33333333%;}
+  .#{$HOST}-col-md2{width: 16.66666667%;}
+  .#{$HOST}-col-md3{width: 25%;}
+  .#{$HOST}-col-md4{width: 33.33333333%;}
+  .#{$HOST}-col-md5{width: 41.66666667%;}
+  .#{$HOST}-col-md6{width: 50%;}
+  .#{$HOST}-col-md7{width: 58.33333333%;}
+  .#{$HOST}-col-md8{width: 66.66666667%;}
+  .#{$HOST}-col-md9{width: 75%;}
+  .#{$HOST}-col-md10{width: 83.33333333%;}
+  .#{$HOST}-col-md11{width: 91.66666667%;}
+  .#{$HOST}-col-md12{width: 100%;}
+  /* 列偏移 */
+  .#{$HOST}-col-md-offset1{margin-left: 8.33333333%;}
+  .#{$HOST}-col-md-offset2{margin-left: 16.66666667%;}
+  .#{$HOST}-col-md-offset3{margin-left: 25%;}
+  .#{$HOST}-col-md-offset4{margin-left: 33.33333333%;}
+  .#{$HOST}-col-md-offset5{margin-left: 41.66666667%;}
+  .#{$HOST}-col-md-offset6{margin-left: 50%;}
+  .#{$HOST}-col-md-offset7{margin-left: 58.33333333%;}
+  .#{$HOST}-col-md-offset8{margin-left: 66.66666667%;}
+  .#{$HOST}-col-md-offset9{margin-left: 75%;}
+  .#{$HOST}-col-md-offset10{margin-left: 83.33333333%;}
+  .#{$HOST}-col-md-offset11{margin-left: 91.66666667%;}
+  .#{$HOST}-col-md-offset12{margin-left: 100%;}
+}
+/* 大型屏幕(桌面) */
+@media screen and (min-width: 1200px) {
+  .#{$HOST}-container{width: 1170px;}
+  .#{$HOST}-hide-lg{display: none!important;}
+  .#{$HOST}-show-lg-block{display: block!important;}
+  .#{$HOST}-show-lg-inline{display: inline!important;}
+  .#{$HOST}-show-lg-inline-block{display: inline-block!important;}
+  
+  .#{$HOST}-col-lg1, .#{$HOST}-col-lg2, .#{$HOST}-col-lg3, .#{$HOST}-col-lg4, .#{$HOST}-col-lg5, .#{$HOST}-col-lg6, .#{$HOST}-col-lg7, .#{$HOST}-col-lg8, .#{$HOST}-col-lg9, .#{$HOST}-col-lg10, .#{$HOST}-col-lg11, .#{$HOST}-col-lg12{float: left;}
+  .#{$HOST}-col-lg1{width: 8.33333333%;}
+  .#{$HOST}-col-lg2{width: 16.66666667%;}
+  .#{$HOST}-col-lg3{width: 25%;}
+  .#{$HOST}-col-lg4{width: 33.33333333%;}
+  .#{$HOST}-col-lg5{width: 41.66666667%;}
+  .#{$HOST}-col-lg6{width: 50%;}
+  .#{$HOST}-col-lg7{width: 58.33333333%;}
+  .#{$HOST}-col-lg8{width: 66.66666667%;}
+  .#{$HOST}-col-lg9{width: 75%;}
+  .#{$HOST}-col-lg10{width: 83.33333333%;}
+  .#{$HOST}-col-lg11{width: 91.66666667%;}
+  .#{$HOST}-col-lg12{width: 100%;}
+  /* 列偏移 */
+  .#{$HOST}-col-lg-offset1{margin-left: 8.33333333%;}
+  .#{$HOST}-col-lg-offset2{margin-left: 16.66666667%;}
+  .#{$HOST}-col-lg-offset3{margin-left: 25%;}
+  .#{$HOST}-col-lg-offset4{margin-left: 33.33333333%;}
+  .#{$HOST}-col-lg-offset5{margin-left: 41.66666667%;}
+  .#{$HOST}-col-lg-offset6{margin-left: 50%;}
+  .#{$HOST}-col-lg-offset7{margin-left: 58.33333333%;}
+  .#{$HOST}-col-lg-offset8{margin-left: 66.66666667%;}
+  .#{$HOST}-col-lg-offset9{margin-left: 75%;}
+  .#{$HOST}-col-lg-offset10{margin-left: 83.33333333%;}
+  .#{$HOST}-col-lg-offset11{margin-left: 91.66666667%;}
+  .#{$HOST}-col-lg-offset12{margin-left: 100%;}
+}
+
+/* 列间隔 */.#{$HOST}-col-space1{margin: -0.5px;}
+.#{$HOST}-col-space1>*{padding: 0.5px;}
+.#{$HOST}-col-space3{margin: -1.5px;}
+.#{$HOST}-col-space3>*{padding: 1.5px;}
+.#{$HOST}-col-space5{margin: -2.5px;}
+.#{$HOST}-col-space5>*{padding: 2.5px;}
+.#{$HOST}-col-space8{margin: -3.5px;}
+.#{$HOST}-col-space8>*{padding: 3.5px;}
+.#{$HOST}-col-space10{margin: -5px;}
+.#{$HOST}-col-space10>*{padding: 5px;}
+.#{$HOST}-col-space12{margin: -6px;}
+.#{$HOST}-col-space12>*{padding: 6px;}
+.#{$HOST}-col-space15{margin: -7.5px;}
+.#{$HOST}-col-space15>*{padding: 7.5px;}
+.#{$HOST}-col-space18{margin: -9px;}
+.#{$HOST}-col-space18>*{padding: 9px;}
+.#{$HOST}-col-space20{margin: -10px;}
+.#{$HOST}-col-space20>*{padding: 10px;}
+.#{$HOST}-col-space22{margin: -11px;}
+.#{$HOST}-col-space22>*{padding: 11px;}
+.#{$HOST}-col-space25{margin: -12.5px;}
+.#{$HOST}-col-space25>*{padding: 12.5px;}
+.#{$HOST}-col-space30{margin: -15px;}
+.#{$HOST}-col-space30>*{padding: 15px;}
+

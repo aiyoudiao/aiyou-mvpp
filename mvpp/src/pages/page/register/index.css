@@ -1,0 +1,18 @@
+ #login form.layui-form {
+            margin: 0;
+            transform: translate(-50%, -50%);
+        }
+
+.register .tit {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.register .code-box {
+    display: flex;
+}
+
+.register .code-box .btn-auth-code {
+    margin-left: 10px;
+}

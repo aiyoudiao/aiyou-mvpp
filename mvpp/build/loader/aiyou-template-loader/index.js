@@ -23,8 +23,8 @@ module.exports = function (content) {
     parseMacros = true,
     engine = false,
     withImports = false,
-    attributes = ['img:src'],
-    // attributes = [],
+    // attributes = ['img:src'],
+    attributes = [],
     parseDynamicRoutes = false;
 
   // Parse arguments
@@ -121,13 +121,13 @@ module.exports = function (content) {
   source = attributesContext.resolveAttributes(source);
 
 
-  console.log('###########KK############')
+  // console.log('###########KK############')
 
+  // // console.log(source);
+  // // source = source.replace('with(obj||{}){', "");
+  // // source = source.replace(/}[\r\n\b]*?return __p;/img, "return __p;")
   // console.log(source);
-  // source = source.replace('with(obj||{}){', "");
-  // source = source.replace(/}[\r\n\b]*?return __p;/img, "return __p;")
-  console.log(source);
-  console.log('###########KK############')
+  // console.log('###########KK############')
 
   // Build the module export, optionally with template imports
   if (withImports) {

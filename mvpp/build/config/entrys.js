@@ -55,7 +55,8 @@ const __exclude = [
 
             const htmlPluginOption = {
                 template: entryHtmlFile,
-                filename: `./pages${relativePrefix}.html`,
+                // filename: `./pages${relativePrefix}.html`,
+                filename: `.${relativePrefix}.html`,
                 chunk: chunk,/* NOTE 这个地方之后需要单独过滤一下，因为要抽离出公共代码块 */
                 inject: true,/* 是否将js注入到html文件中去 */
             }

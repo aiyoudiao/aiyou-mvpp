@@ -1,0 +1,56 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-18 18:24:58
+ * @LastEditTime : 2020-01-20 20:08:03
+ * @LastEditors  : ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	@require(<%'./@my-component/core/header.html'%>, <%{title:"权限列表"}%>)
+	<link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
+	<script type="text/javascript" src="@request(<%'/static/lib/loading/okLoading.js'%>)"></script>
+</head>
+
+<body class="ok-body-scroll">
+	<div class="ok-body">
+		<!--面包屑导航区域-->
+		<!-- <div class="ok-body-breadcrumb">
+			<span class="layui-breadcrumb">
+				<a><cite>首页</cite></a>
+				<a><cite>常用页面</cite></a>
+				<a><cite>权限列表</cite></a>
+			</span>
+			<a class="layui-btn layui-btn-sm" href="javascript:location.replace(location.href);" title="刷新">
+				<i class="layui-icon layui-icon-refresh"></i>
+			</a>
+		</div> -->
+		<!-- 模糊搜索区域 -->
+		<!-- <div class="layui-row">
+			<form class="layui-form layui-col-md12 ok-search">
+				<input class="layui-input" placeholder="开始日期" autocomplete="off" id="startTime">
+				<input class="layui-input" placeholder="截止日期" autocomplete="off" id="endTime">
+				<input class="layui-input" placeholder="请输入权限名" autocomplete="off">
+				<button class="layui-btn" lay-submit="" lay-filter="search">
+					<i class="layui-icon layui-icon-search"></i>
+				</button>
+			</form>
+		</div> -->
+		<div class="layui-row">
+			<div class="layui-col-md3">
+				<div id="permissionTree"></div>
+			</div>
+			<div class="layui-col-md9">
+				<table class="layui-hide" id="permissionTable" lay-filter="tableFilter"></table>
+			</div>
+		</div>
+	</div>
+
+	@require(<%'./template.html'%>, <%{}%>)
+	@require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+
+</html>

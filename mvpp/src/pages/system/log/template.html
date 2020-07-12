@@ -1,0 +1,46 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-22 14:36:07
+ * @LastEditTime : 2020-01-22 14:36:21
+ * @LastEditors  : ilovejwl
+ -->
+<!-- 头工具栏模板 -->
+<script type="text/html" id="toolbarTpl">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="batchEnabled">批量上架</button>
+        <button class="layui-btn layui-btn-sm layui-btn-warm" lay-event="batchDisabled">批量下架</button>
+        <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="batchDel">批量删除</button>
+        <button class="layui-btn layui-btn-sm" lay-event="add">添加文章</button>
+    </div>
+</script>
+<!-- 链接模板 -->
+<script type="text/html" id="urlTpl">
+    <a href="{{d.url}}" target="_blank">{{d.url}}</a>
+</script>
+<!-- 是否指顶模板
+    <input type="checkbox" name="isTop" value="{{d.isTop}}" lay-skin="switch" lay-text="是|否" {{ d.isTop== true ? 'checked' : ''}}>
+-->
+<script type="text/html" id="topTpl">
+    {{#  if(d.isTop == true){ }}
+    <span class="layui-btn layui-btn-normal layui-btn-xs">已置顶</span>
+    {{#  } else if(d.isTop == false) { }}
+    <span class="layui-btn layui-btn-warm layui-btn-xs">未置顶</span>
+    {{#  } }}
+</script>
+<!-- 发布状态模板
+    <input type="checkbox" name="top" value="{{d.status}}" lay-skin="switch" lay-text="已发布|未发布" {{ d.status== true ? 'checked' : ''}}>
+-->
+<script type="text/html" id="statusTpl">
+    {{#  if(d.status == true){ }}
+    <span class="layui-btn layui-btn-normal layui-btn-xs">已发布</span>
+    {{#  } else if(d.status == false) { }}
+    <span class="layui-btn layui-btn-warm layui-btn-xs">未发布</span>
+    {{#  } }}
+</script>
+<!-- 行工具栏模板 -->
+<script type="text/html" id="operationTpl">
+    <a href="javascript:" title="编辑" lay-event="edit"><i class="layui-icon">&#xe642;</i></a>
+    <a href="javascript:" title="删除" lay-event="del"><i class="layui-icon">&#xe640;</i></a>
+</script>

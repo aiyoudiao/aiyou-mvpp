@@ -1,0 +1,10 @@
+/* 12 */
+@import './common/contrant.scss';
+
+/** 流加载 **/
+.#{$HOST}-flow-more{margin: 10px 0; text-align: center; color: #999; font-size: 14px;}
+.#{$HOST}-flow-more a{ height: 32px; line-height: 32px;  }
+.#{$HOST}-flow-more a *{display: inline-block; vertical-align: top;}
+.#{$HOST}-flow-more a cite{padding: 0 20px; border-radius: 3px; background-color: #eee; color: #333; font-style: normal;}
+.#{$HOST}-flow-more a cite:hover{opacity: 0.8;}
+.#{$HOST}-flow-more a i{font-size: 30px; color: #737383;}

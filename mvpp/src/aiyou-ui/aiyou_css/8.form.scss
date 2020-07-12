@@ -1,0 +1,112 @@
+/* 8 */
+@import './common/contrant.scss';
+
+/** 表单 **/
+.#{$HOST}-input, .#{$HOST}-textarea, .#{$HOST}-select{height: 38px; line-height: 1.3; line-height: 38px\9; border-width: 1px; border-style: solid; background-color: #fff; border-radius: 2px;}
+.#{$HOST}-input::-webkit-input-placeholder,
+.#{$HOST}-textarea::-webkit-input-placeholder,
+.#{$HOST}-select::-webkit-input-placeholder{line-height: 1.3;}
+.#{$HOST}-input, .#{$HOST}-textarea{display: block; width: 100%; padding-left: 10px;}
+.#{$HOST}-input:hover, .#{$HOST}-textarea:hover{border-color: #D2D2D2 !important;}
+.#{$HOST}-input:focus, .#{$HOST}-textarea:focus{border-color: #C9C9C9 !important;}
+.#{$HOST}-textarea{position: relative; min-height: 100px; height: auto; line-height: 20px; padding: 6px 10px; resize: vertical;}
+.#{$HOST}-select{padding: 0 10px;}
+.#{$HOST}-form select, 
+.#{$HOST}-form input[type=checkbox],
+.#{$HOST}-form input[type=radio]{display: none;}
+.#{$HOST}-form *[lay-ignore]{display: initial;}
+
+.#{$HOST}-form-item{margin-bottom: 15px; clear: both; *zoom: 1;}
+.#{$HOST}-form-item:after{content:'\20'; clear: both; *zoom: 1; display: block; height:0;}
+.#{$HOST}-form-label{position: relative; float: left; display: block; padding: 9px 15px;  width: 80px; font-weight: 400; line-height: 20px; text-align: right;}
+.#{$HOST}-form-label-col{display: block; float: none; padding: 9px 0; line-height: 20px; text-align: left;}
+.#{$HOST}-form-item .#{$HOST}-inline{margin-bottom: 5px; margin-right: 10px;}
+.#{$HOST}-input-block, .#{$HOST}-input-inline{position: relative;}
+.#{$HOST}-input-block{margin-left: 110px; min-height: 36px;}
+.#{$HOST}-input-inline{display: inline-block; vertical-align: middle;}
+.#{$HOST}-form-item .#{$HOST}-input-inline{float: left; width: 190px; margin-right: 10px;}
+.#{$HOST}-form-text .#{$HOST}-input-inline{width: auto;}
+
+/* 分割块 */.#{$HOST}-form-mid{position: relative; float: left; display: block; padding: 9px 0 !important; line-height: 20px; margin-right: 10px;}
+/* 警告域 */.#{$HOST}-form-danger:focus
+,.#{$HOST}-form-danger+.#{$HOST}-form-select .#{$HOST}-input{border-color: #FF5722 !important;}
+
+
+/* 下拉选择 */.#{$HOST}-form-select{position: relative;}
+.#{$HOST}-form-select .#{$HOST}-input{padding-right: 30px; cursor: pointer;}
+.#{$HOST}-form-select .#{$HOST}-edge{position: absolute; right: 10px; top: 50%; margin-top: -3px; cursor: pointer; border-width: 6px; border-top-color: #c2c2c2; border-top-style: solid; transition: all .3s; -webkit-transition: all .3s;}
+.#{$HOST}-form-select dl{display: none; position: absolute; left: 0; top: 42px; padding: 5px 0; z-index: 899; min-width: 100%; border: 1px solid #d2d2d2; max-height: 300px; overflow-y: auto; background-color: #fff; border-radius: 2px; box-shadow: 0 2px 4px rgba(0,0,0,.12); box-sizing: border-box;}
+.#{$HOST}-form-select dl dt,
+.#{$HOST}-form-select dl dd{padding: 0 10px; line-height: 36px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.#{$HOST}-form-select dl dt{font-size: 12px; color: #999;}
+.#{$HOST}-form-select dl dd{cursor: pointer;}
+.#{$HOST}-form-select dl dd:hover{background-color: #f2f2f2; -webkit-transition: .5s all; transition: .5s all;}
+.#{$HOST}-form-select .#{$HOST}-select-group dd{padding-left: 20px;}
+.#{$HOST}-form-select dl dd.#{$HOST}-select-tips{padding-left: 10px !important; color: #999;}
+.#{$HOST}-form-select dl dd.#{$HOST}-this{background-color: #5FB878; color: #fff;}
+.#{$HOST}-form-select dl dd.#{$HOST}-disabled{background-color: #fff;}
+.#{$HOST}-form-selected dl{display: block;}
+.#{$HOST}-form-selected .#{$HOST}-edge{margin-top: -9px; -webkit-transform:rotate(180deg); transform: rotate(180deg);}
+.#{$HOST}-form-selected .#{$HOST}-edge{margin-top: -3px\0; }
+:root .#{$HOST}-form-selected .#{$HOST}-edge{margin-top: -9px\0/IE9;}
+.#{$HOST}-form-selectup dl{top: auto; bottom: 42px;}
+.#{$HOST}-select-none{margin: 5px 0; text-align: center; color: #999;}
+
+.#{$HOST}-select-disabled .#{$HOST}-disabled{border-color: #eee !important;}
+.#{$HOST}-select-disabled .#{$HOST}-edge{border-top-color: #d2d2d2}
+
+/* 复选框 */.#{$HOST}-form-checkbox{position: relative; display: inline-block; vertical-align: middle; height: 30px; line-height: 30px; margin-right: 10px; padding-right: 30px; background-color: #fff; cursor: pointer; font-size: 0;  -webkit-transition: .1s linear; transition: .1s linear; box-sizing: border-box;}
+.#{$HOST}-form-checkbox:hover{}
+.#{$HOST}-form-checkbox *{display: inline-block; vertical-align: middle;}
+.#{$HOST}-form-checkbox span{padding: 0 10px; height: 100%; font-size: 14px; border-radius: 2px 0 0 2px; background-color: #d2d2d2; color: #fff; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.#{$HOST}-form-checkbox:hover span{background-color: #c2c2c2;}
+.#{$HOST}-form-checkbox i{position: absolute; right: 0; top: 0; width: 30px; height: 28px; border: 1px solid #d2d2d2; border-left: none; border-radius: 0 2px 2px 0; color: #fff; font-size: 20px; text-align: center;}
+.#{$HOST}-form-checkbox:hover i{border-color: #c2c2c2; color: #c2c2c2;}
+.#{$HOST}-form-checked, .#{$HOST}-form-checked:hover{border-color: #5FB878;}
+.#{$HOST}-form-checked span, .#{$HOST}-form-checked:hover span{background-color: #5FB878;}
+.#{$HOST}-form-checked i, .#{$HOST}-form-checked:hover i{color: #5FB878;}
+.#{$HOST}-form-item .#{$HOST}-form-checkbox{margin-top: 4px;}
+
+/* 复选框-原始风格 */.#{$HOST}-form-checkbox[lay-skin="primary"]{height: auto!important; line-height: normal!important; min-width: 18px; min-height: 18px; border: none!important; margin-right: 0; padding-left: 28px; padding-right: 0; background: none;}
+.#{$HOST}-form-checkbox[lay-skin="primary"] span{padding-left: 0; padding-right: 15px; line-height: 18px; background: none; color: #666;}
+.#{$HOST}-form-checkbox[lay-skin="primary"] i{right: auto; left: 0; width: 16px; height: 16px; line-height: 16px; border: 1px solid #d2d2d2; font-size: 12px; border-radius: 2px; background-color: #fff; -webkit-transition: .1s linear; transition: .1s linear;}
+.#{$HOST}-form-checkbox[lay-skin="primary"]:hover i{border-color: #5FB878; color: #fff;}
+.#{$HOST}-form-checked[lay-skin="primary"] i{border-color: #5FB878 !important; background-color: #5FB878; color: #fff;}
+.#{$HOST}-checkbox-disbaled[lay-skin="primary"] span{background: none!important; color: #c2c2c2;}
+.#{$HOST}-checkbox-disbaled[lay-skin="primary"]:hover i{border-color: #d2d2d2;}
+.#{$HOST}-form-item .#{$HOST}-form-checkbox[lay-skin="primary"]{margin-top: 10px;}
+
+/* 复选框-开关风格 */.#{$HOST}-form-switch{position: relative; display: inline-block; vertical-align: middle; height: 22px; line-height: 22px; min-width: 35px; padding: 0 5px; margin-top: 8px; border: 1px solid #d2d2d2; border-radius: 20px; cursor: pointer; background-color: #fff; -webkit-transition: .1s linear; transition: .1s linear;}
+.#{$HOST}-form-switch i{position: absolute; left: 5px; top: 3px; width: 16px; height: 16px; border-radius: 20px; background-color: #d2d2d2; -webkit-transition: .1s linear; transition: .1s linear;}
+.#{$HOST}-form-switch em{position: relative; top: 0; width: 25px; margin-left: 21px; padding: 0!important; text-align: center!important; color: #999!important; font-style: normal!important; font-size: 12px;}
+.#{$HOST}-form-onswitch{border-color: #5FB878; background-color: #5FB878;}
+.#{$HOST}-form-onswitch i{left: 100%; margin-left: -21px; background-color: #fff;}
+.#{$HOST}-form-onswitch em{margin-left: 5px; margin-right: 21px; color: #fff!important;}
+
+.#{$HOST}-checkbox-disbaled{border-color: #e2e2e2 !important;}
+.#{$HOST}-checkbox-disbaled span{background-color: #e2e2e2 !important;}
+.#{$HOST}-checkbox-disbaled i{border-color: #e2e2e2 !important;}
+.#{$HOST}-checkbox-disbaled:hover i{color: #fff !important;}
+
+/* 单选框 */
+*[lay-radio]{display: none;}
+.#{$HOST}-form-radio{display: inline-block; vertical-align: middle; line-height: 28px; margin: 6px 10px 0 0; padding-right: 10px; cursor: pointer; font-size: 0;}
+.#{$HOST}-form-radio *{display: inline-block; vertical-align: middle; font-size: 14px;}
+.#{$HOST}-form-radio>i{margin-right: 8px; font-size: 22px; color: #c2c2c2;}
+.#{$HOST}-form-radioed>i,.#{$HOST}-form-radio>i:hover{color: #5FB878;}
+.#{$HOST}-radio-disbaled>i{color: #e2e2e2 !important;}
+
+/* 表单方框风格 */.#{$HOST}-form-pane .#{$HOST}-form-label{width: 110px; padding: 8px 15px; height: 38px; line-height: 20px; border-width: 1px; border-style: solid; border-radius: 2px 0 0 2px; text-align: center; background-color: #FBFBFB; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; box-sizing: border-box;}
+.#{$HOST}-form-pane .#{$HOST}-input-inline{margin-left: -1px;}
+.#{$HOST}-form-pane .#{$HOST}-input-block{margin-left: 110px; left: -1px;}
+.#{$HOST}-form-pane .#{$HOST}-input{border-radius: 0 2px 2px 0;}
+.#{$HOST}-form-pane .#{$HOST}-form-text .#{$HOST}-form-label{float: none; width: 100%; border-radius: 2px; box-sizing: border-box; text-align: left;}
+.#{$HOST}-form-pane .#{$HOST}-form-text .#{$HOST}-input-inline{display: block; margin: 0; top: -1px; clear: both;}
+.#{$HOST}-form-pane .#{$HOST}-form-text .#{$HOST}-input-block{margin: 0; left: 0; top: -1px;}
+.#{$HOST}-form-pane .#{$HOST}-form-text .#{$HOST}-textarea{min-height: 100px; border-radius: 0 0 2px 2px;}
+.#{$HOST}-form-pane .#{$HOST}-form-checkbox{margin: 4px 0 4px 10px;}
+.#{$HOST}-form-pane .#{$HOST}-form-switch, 
+.#{$HOST}-form-pane .#{$HOST}-form-radio{margin-top: 6px; margin-left: 10px; }
+.#{$HOST}-form-pane .#{$HOST}-form-item[pane]{position: relative; border-width: 1px; border-style: solid;}
+.#{$HOST}-form-pane .#{$HOST}-form-item[pane] .#{$HOST}-form-label{position: absolute; left: 0; top: 0; height: 100%; border-width: 0px; border-right-width: 1px;}
+.#{$HOST}-form-pane .#{$HOST}-form-item[pane] .#{$HOST}-input-inline{margin-left: 110px;}

@@ -1,0 +1,54 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:57
+ * @LastEditTime: 2020-01-21 21:46:43
+ * @LastEditors: ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	@require(<%'./@my-component/core/header.html'%>, <%{title: 'bsgrid'}%>)
+	<link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
+	<link rel="stylesheet" href="@request(<%'/static/lib/jquery.bsgrid/builds/merged/bsgrid.all.min.css'%>)">
+	<script type="text/javascript" src="@request(<%'/static/lib/loading/okLoading.js'%>)"></script>
+</head>
+<body>
+<div class="ok-body">
+	<!--模糊搜索区域-->
+	<div class="layui-row">
+		<form class="layui-form layui-col-md12 ok-search">
+			<input class="layui-input" placeholder="开始日期" autocomplete="off" id="startTime" name="startTime">
+			<input class="layui-input" placeholder="截止日期" autocomplete="off" id="endTime" name="endTime">
+			<input class="layui-input" placeholder="账号" autocomplete="off" name="username">
+			<button class="layui-btn" lay-submit="" lay-filter="search">
+				<i class="layui-icon">&#xe615;</i>
+			</button>
+		</form>
+	</div>
+	<!--数据表格-->
+	<table id="bsgrid">
+		<tr>
+			<th w_index="id" w_check="true"></th>
+			<th w_index="id">ID</th>
+			<th w_index="username" w_align="left">账号</th>
+			<th w_index="password" w_align="left">密码</th>
+			<th w_index="nickname">昵称</th>
+			<th w_index="name">姓名</th>
+			<th w_index="role" w_render="roleFmt" w_align="left">角色</th>
+			<th w_index="status" w_render="statusFmt">状态</th>
+			<th w_index="email" w_align="left">邮箱</th>
+			<th w_index="phone">手机</th>
+			<th w_index="createTime">创建时间</th>
+			<th w_index="updateTime">修改时间</th>
+			<th w_render="toolbar" w_align="center">工具栏</th>
+		</tr>
+	</table>
+</div>
+@require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+<script src="@request(<%'/static/lib/jquery.bsgrid/plugins/jquery-1.4.4.min.js'%>)"></script>
+<script src="@request(<%'/static/lib/jquery.bsgrid/builds/js/lang/grid.zh-CN.min.js'%>)"></script>
+<script src="@request(<%'/static/lib/jquery.bsgrid/builds/merged/bsgrid.all.min.js'%>)"></script>
+</body>
+</html>

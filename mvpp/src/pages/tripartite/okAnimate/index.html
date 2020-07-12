@@ -1,0 +1,30 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:57
+ * @LastEditTime : 2020-01-22 15:34:54
+ * @LastEditors  : ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    @require(<%'./@my-component/core/header.html'%>, <%{title: 'okAnimate'}%>)
+    <link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
+</head>
+<body>
+    <div class="ok-body">
+        <blockquote class="layui-elem-quote">
+            <p>Animate.css 一款强大的预设css3动画库</p>
+        </blockquote>
+        <pre>
+// Step1
+引入：css/oksub.css
+// Step2
+<span class="ok-anim shake">文字特效</span>>
+        </pre>
+        <button type="button" class="layui-btn" id="try">试一下</button>
+    </div>
+    @require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+</html>

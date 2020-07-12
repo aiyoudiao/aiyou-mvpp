@@ -42,7 +42,7 @@ var objExtend = function (args, obj) {
 // const router = require ('./router');
 // console.log("路由引入的是：", adminRouter)
 
-const baseUrl = process.env.baseUrlPrefix || '/';
+const baseUrl = process.env.baseUrlPrefix || '/pages';
 
 module.exports = {
     require2: function (resourcePath, args) {

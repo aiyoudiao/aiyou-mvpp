@@ -1,0 +1,38 @@
+/* 6 */
+@import './common/contrant.scss';
+
+/*
+
+  面板
+ 
+*/
+
+
+/* 折叠面板 */
+.#{$HOST}-collapse{border-width: 1px; border-style: solid; border-radius: 2px;}
+.#{$HOST}-colla-item,
+.#{$HOST}-colla-content{border-top-width: 1px; border-top-style: solid;}
+.#{$HOST}-colla-item:first-child{border-top: none;}
+.#{$HOST}-colla-title{position: relative; height: 42px; line-height: 42px; padding: 0 15px 0 35px; color: #333; background-color: #f2f2f2; cursor: pointer; font-size: 14px; overflow: hidden;}
+.#{$HOST}-colla-content{display: none; padding: 10px 15px; line-height: 22px; color: #666;}
+.#{$HOST}-colla-icon{position: absolute; left: 15px; top: 0; font-size: 14px;}
+
+/* 卡片面板 */
+.#{$HOST}-card{margin-bottom: 15px; border-radius: 2px; background-color: #fff; box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);}
+.#{$HOST}-card:last-child{margin-bottom: 0;}
+.#{$HOST}-card-header{position: relative; height: 42px; line-height: 42px; padding: 0 15px; border-bottom: 1px solid #f6f6f6; color: #333; border-radius: 2px 2px 0 0; font-size: 14px;}
+.#{$HOST}-card-body{position: relative; padding: 10px 15px; line-height: 24px;}
+.#{$HOST}-card-body[pad15]{padding: 15px;}
+.#{$HOST}-card-body[pad20]{padding: 20px;}
+.#{$HOST}-card-body .#{$HOST}-table{margin: 5px 0;}
+.#{$HOST}-card .#{$HOST}-tab{margin: 0;}
+
+/* 常规面板 */
+.#{$HOST}-panel{}
+
+/* 窗口面板 */
+.#{$HOST}-panel-window{position: relative; padding: 15px; border-radius: 0; border-top: 5px solid #E6E6E6; background-color: #fff;}
+
+/* 其它辅助 */
+.#{$HOST}-auxiliar-moving{position: fixed; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; background: none; z-index: 9999999999;}
+

@@ -1,0 +1,20 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:57
+ * @LastEditTime: 2020-01-21 21:42:39
+ * @LastEditors: ilovejwl
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@require(<%'./@my-component/core/header.html'%>, <%{title: '环形图'}%>)
+	<link rel="stylesheet" href="@request(<%'/static/lib/loading/okLoading.css'%>)"/>
+	<script type="text/javascript" src="@request(<%'/static/lib/loading/okLoading.js'%>)"></script>
+	<script src="@request(<%'/static/lib/echarts/echarts.min.js'%>)"></script>
+</head>
+<body>
+<div id="main" style="width: 100%;height:400px;margin-top: 50px;"></div>
+</body>
+</html>

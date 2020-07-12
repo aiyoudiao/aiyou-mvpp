@@ -1,0 +1,56 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:58
+ * @LastEditTime: 2020-01-22 16:07:57
+ * @LastEditors: ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    @require(<%'./@my-component/core/header.html'%>, <%{title: 'Neditor'}%>)
+    <link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
+    <script type="text/javascript" charset="utf-8" src="@request(<%'/static/lib/neditor/neditor.config.js'%>)"></script>
+    <script type="text/javascript" charset="utf-8" src="@request(<%'/static/lib/neditor/neditor.all.min.js'%>)"></script>
+    <script type="text/javascript" charset="utf-8" src="@request(<%'/static/lib/neditor/neditor.service.js'%>)"></script>
+    <script type="text/javascript" charset="utf-8" src="@request(<%'/static/lib/neditor/i18n/zh-cn/zh-cn.js'%>)"></script>
+    <script type="text/javascript" src="@request(<%'/static/lib/neditor/third-party/browser-md5-file.min.js'%>)"></script>
+    <script type="text/javascript" src="@request(<%'/static/lib/neditor/third-party/jquery-1.10.2.min.js'%>)"></script>
+</head>
+<body>
+    <div class="ok-body">
+        <script id="editor" type="text/plain" style="width:1024px;height:300px;"></script>
+
+        <div id="btns">
+            <div>
+                <button onclick="getAllHtml()">获得整个html的内容</button>
+                <button onclick="getContent()">获得内容</button>
+                <button onclick="setContent()">写入内容</button>
+                <button onclick="setContent(true)">追加内容</button>
+                <button onclick="getContentTxt()">获得纯文本</button>
+                <button onclick="getPlainTxt()">获得带格式的纯文本</button>
+                <button onclick="hasContent()">判断是否有内容</button>
+                <button onclick="setFocus()">使编辑器获得焦点</button>
+                <button onmousedown="isFocus(event)">编辑器是否获得焦点</button>
+                <button onmousedown="setblur(event)">编辑器失去焦点</button>
+
+            </div>
+            <div>
+                <button onclick="getText()">获得当前选中的文本</button>
+                <button onclick="insertHtml()">插入给定的内容</button>
+                <button id="enable" onclick="setEnabled()">可以编辑</button>
+                <button onclick="setDisabled()">不可编辑</button>
+                <button onclick=" UE.getEditor('editor').setHide()">隐藏编辑器</button>
+                <button onclick=" UE.getEditor('editor').setShow()">显示编辑器</button>
+                <button onclick=" UE.getEditor('editor').setHeight(300)">设置高度为300默认关闭了自动长高</button>
+                <button onclick=" UE.getEditor('editor').setPlaceholder('请输入内容')">设置placeholder</button>
+            </div>
+            <div>
+                <button onclick="getLocalData()">获取草稿箱内容</button>
+                <button onclick="clearLocalData()">清空草稿箱</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

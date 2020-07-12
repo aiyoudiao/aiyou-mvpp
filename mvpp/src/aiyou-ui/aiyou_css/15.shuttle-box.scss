@@ -1,0 +1,23 @@
+/* 15 */
+@import './common/contrant.scss';
+
+
+/** 穿梭框 **/
+.#{$HOST}-transfer-box,
+.#{$HOST}-transfer-header,
+.#{$HOST}-transfer-search{border-width: 0; border-style: solid; border-color: #e6e6e6}
+.#{$HOST}-transfer-box{position: relative; display: inline-block; vertical-align: middle; border-width: 1px; width: 200px; height: 360px; border-radius: 2px; background-color:#fff;}
+.#{$HOST}-transfer-box .#{$HOST}-form-checkbox{width: 100%; margin: 0 !important;}
+.#{$HOST}-transfer-header{height: 38px; line-height: 38px; padding: 0 10px; border-bottom-width: 1px;}
+.#{$HOST}-transfer-search{position:relative; padding: 10px; border-bottom-width: 1px;}
+.#{$HOST}-transfer-search .#{$HOST}-input{height: 32px; padding-left: 30px; font-size: 12px;}
+.#{$HOST}-transfer-search .#{$HOST}-icon-search{position: absolute; left: 20px; top: 50%; margin-top: -8px; color: #666;}
+.#{$HOST}-transfer-active{margin: 0 15px; display: inline-block; vertical-align: middle;}
+.#{$HOST}-transfer-active .#{$HOST}-btn{display: block; margin: 0; padding: 0 15px; background-color: #5FB878; border-color: #5FB878; color: #fff;}
+.#{$HOST}-transfer-active .#{$HOST}-btn-disabled{background-color: #FBFBFB; border-color: #e6e6e6; color: #C9C9C9;}
+.#{$HOST}-transfer-active .#{$HOST}-btn:first-child{margin-bottom: 15px;}
+.#{$HOST}-transfer-active .#{$HOST}-btn .#{$HOST}-icon{margin: 0; font-size: 14px !important;}
+.#{$HOST}-transfer-data{padding: 5px 0; overflow: auto;}
+.#{$HOST}-transfer-data li{height: 32px; line-height: 32px; padding: 0 10px;}
+.#{$HOST}-transfer-data li:hover{background-color: #f2f2f2; transition: .5s all;}
+.#{$HOST}-transfer-data .#{$HOST}-none{padding: 15px 10px; text-align: center; color: #999;}

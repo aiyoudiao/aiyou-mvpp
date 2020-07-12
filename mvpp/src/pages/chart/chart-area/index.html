@@ -1,0 +1,59 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:57
+ * @LastEditTime : 2020-01-21 21:22:34
+ * @LastEditors  : ilovejwl
+ -->
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:57
+ * @LastEditTime: 2020-01-21 21:21:30
+ * @LastEditors: ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	@require(<%'./@my-component/core/header.html'%>, <%{title: '区域地图'}%>)
+	<link rel="stylesheet" href="@request(<%'/static/css/common.css'%>)"/>
+	<link rel="stylesheet" href="@request(<%'/static/lib/layui/css/layui.css'%>)" media="all"/>
+	<script type="text/javascript" src="@request(<%'/static/lib/loading/okLoading.js'%>)"></script>
+	<script type="text/javascript" src="@request(<%'/static/lib/echarts/echarts.min.js'%>)"></script>
+	<script type="text/javascript" src="@request(<%'/static/lib/echarts/world/js/china.js'%>)"></script>
+	<script type="text/javascript" src="@request(<%'/static/lib/echarts/world/js/province/chongqing.js'%>)"></script>
+	<script type="text/javascript" src="@request(<%'/static/lib/echarts/world/js/province/sichuan.js'%>)"></script>
+	<script type="text/javascript" src="@request(<%'/static/lib/echarts/world/js/province/guangdong.js'%>)"></script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body class="childrenBody ok-body-scroll">
+<div class="layui-row layui-col-space15">
+	<div class="layui-col-md6">
+		<div class="layui-card">
+			<div class="map" id="china_a"></div>
+		</div>
+	</div>
+	<div class="layui-col-md6">
+		<div class="layui-card">
+			<div class="map" id="china_b"></div>
+		</div>
+	</div>
+	<div class="layui-col-md6">
+		<div class="layui-card">
+			<div class="map" id="china_c"></div>
+		</div>
+	</div>
+	<div class="layui-col-md6">
+		<div class="layui-card">
+			<div class="map" id="china_d"></div>
+		</div>
+	</div>
+</div>
+@require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+</html>
+

@@ -1,0 +1,5 @@
+## 使用layui + es6 + webpack4开发
+https://juejin.im/post/5dcbdc83e51d451c0b1960db
+
+## layui.js转ES6模式有吗？
+https://fly.layui.com/jie/26377/

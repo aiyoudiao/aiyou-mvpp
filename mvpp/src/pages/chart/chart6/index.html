@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@require(<%'./@my-component/core/header.html'%>, <%{title: '热力图'}%>)
+	<link rel="stylesheet" href="@request(<%'/static/lib/loading/okLoading.css'%>)"/>
+	<script type="text/javascript" src="@request(<%'/static/lib/loading/okLoading.js'%>)"></script>
+	<script src="@request(<%'/static/lib/echarts/echarts.min.js'%>)"></script>
+</head>
+<body>
+<div id="main" style="width: 100%;height:400px;margin-top: 50px;"></div>
+</body>
+</html>

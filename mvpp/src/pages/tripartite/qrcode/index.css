@@ -1,0 +1,13 @@
+.ok-body {
+  padding: 20px;
+}
+
+blockquote {
+  font-size: 16px;
+}
+
+.qr-box > div {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+}

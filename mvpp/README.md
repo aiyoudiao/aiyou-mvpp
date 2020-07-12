@@ -172,3 +172,12 @@ underscore-template-loader 的pull request 提交不了，但是我创建了一�
 
 如果三天没有得到回复或者npm上没有更新，那我就把它们改个名字，自己提交到github上和npm上去，不然我用不了嘞。
 
+### 20200712pm1728
+
+新建一个aiyou-ui的分支，这个分支取消掉了在页面中对图片进行打包的支持，aiyou-template-loader 目前只能支持页面全都是本地图片打包的支持，如果路径不对就会报错。
+所以这个分支就不会支持页面图片的打包。
+
+在自己的aiyou-admin中添加了mvpp工程化的支持。无论是开发环境还是生产环境都可以正常的使用。
+
+http-server
++ http-server@0.12.3

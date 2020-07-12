@@ -1,0 +1,41 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:58
+ * @LastEditTime : 2020-01-22 15:47:31
+ * @LastEditors  : ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    @require(<%'./@my-component/core/header.html'%>, <%{title: 'okCookie'}%>)
+    <link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
+</head>
+
+<body>
+    <div class="ok-body">
+        <blockquote class="layui-elem-quote">
+            <p>JavaScript Cookies操作</p>
+        </blockquote>
+        <pre>
+layui.use(["okCookie"], function () {
+    let $ = layui.jquery;
+    <br/>
+    // 创建cookie
+    $.cookie("hello", "word")
+
+    // 读取cookie
+    let hello = $.cookie("hello");
+    console.log(hello);
+
+    // 删除cookie
+    $.cookie("hello", null);
+});
+        </pre>
+    </div>
+    @require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+/* 28 */
+@import './common/contrant.scss';
+
+/** 树组件 By star1029 **/
+.#{$HOST}-tree{line-height: 22px;}
+.#{$HOST}-tree .#{$HOST}-form-checkbox{margin: 0 !important;}
+.#{$HOST}-tree-set{width: 100%; position: relative;}
+.#{$HOST}-tree-pack{display: none; padding-left: 20px; position: relative;}
+.#{$HOST}-tree-line .#{$HOST}-tree-pack{padding-left: 27px;}
+.#{$HOST}-tree-line .#{$HOST}-tree-set .#{$HOST}-tree-set:after{content: ''; position: absolute; top: 14px; left: -9px; width: 17px; height: 0; border-top: 1px dotted #c0c4cc;}
+.#{$HOST}-tree-entry{position: relative; padding: 3px 0; height: 20px; white-space: nowrap;}
+.#{$HOST}-tree-entry:hover{background-color: #eee;}
+.#{$HOST}-tree-line .#{$HOST}-tree-entry:hover{background-color: rgba(0,0,0,0);}
+.#{$HOST}-tree-line .#{$HOST}-tree-entry:hover .#{$HOST}-tree-txt{color: #999; text-decoration: underline; transition: 0.3s;}
+.#{$HOST}-tree-main{display: inline-block; vertical-align: middle; cursor: pointer; padding-right: 10px;}
+.#{$HOST}-tree-line .#{$HOST}-tree-set:before{content: ''; position: absolute; top: 0; left: -9px; width: 0; height: 100%; border-left: 1px dotted #c0c4cc;}
+.#{$HOST}-tree-line .#{$HOST}-tree-set.#{$HOST}-tree-setLineShort:before{height: 13px;}
+.#{$HOST}-tree-line .#{$HOST}-tree-set.#{$HOST}-tree-setHide:before{height: 0;}
+.#{$HOST}-tree-iconClick{display: inline-block; vertical-align: middle; position: relative; height: 20px; line-height: 20px; margin: 0 10px; color: #c0c4cc;}
+.#{$HOST}-tree-icon{height: 12px; line-height: 12px; width: 12px; text-align: center; border: 1px solid #c0c4cc;}
+.#{$HOST}-tree-iconClick .#{$HOST}-icon{font-size: 18px;}
+.#{$HOST}-tree-icon .#{$HOST}-icon{font-size: 12px; color: #666;}
+.#{$HOST}-tree-iconArrow{padding: 0 5px;}
+.#{$HOST}-tree-iconArrow:after{content: ''; position: absolute; left: 4px; top: 3px; z-index: 100; width: 0; height: 0; border-width: 5px; border-style: solid; border-color: transparent transparent transparent #c0c4cc; transition: 0.5s;}
+.#{$HOST}-tree-spread>.#{$HOST}-tree-entry>.#{$HOST}-tree-iconClick>.#{$HOST}-tree-iconArrow:after{transform: rotate(90deg) translate(3px, 4px);}
+.#{$HOST}-tree-txt{display: inline-block; vertical-align: middle; color: #555;}
+.#{$HOST}-tree-search{margin-bottom: 15px; color: #666;}
+.#{$HOST}-tree-btnGroup{visibility: hidden; display: inline-block; vertical-align: middle; position: relative;}
+.#{$HOST}-tree-btnGroup .#{$HOST}-icon{display: inline-block; vertical-align: middle; padding: 0 2px; cursor: pointer;}
+.#{$HOST}-tree-btnGroup .#{$HOST}-icon:hover{color: #999; transition: 0.3s;}
+.#{$HOST}-tree-entry:hover .#{$HOST}-tree-btnGroup{visibility: visible;}
+.#{$HOST}-tree-editInput{position: relative; display: inline-block; vertical-align: middle; height: 20px; line-height: 20px; padding: 0 3px; border: none; background-color: rgba(0,0,0,0.05);}
+.#{$HOST}-tree-emptyText{text-align: center; color: #999;}
+

@@ -1,0 +1,27 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:58
+ * @LastEditTime : 2020-01-22 16:01:22
+ * @LastEditors  : ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    @require(<%'./@my-component/core/header.html'%>, <%{title: '用户列表'}%>)
+    <link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
+</head>
+<body>
+    <div class="ok-body">
+        <textarea id="editor"></textarea>
+        <br/>
+        <button type="button" class="layui-btn" onclick="setContent()">设置内容</button>
+        <button type="button" class="layui-btn" onclick="appendContent()">追加内容</button>
+        <button type="button" class="layui-btn" onclick="clearContent()">清空内容</button>
+        <button type="button" class="layui-btn" onclick="getHtmlContent()">获取HTML内容</button>
+        <button type="button" class="layui-btn" onclick="getTextContent()">获取TEXT内容</button>
+    </div>
+    <script src="@request(<%'/static/lib/ckeditor5/ckeditor.js'%>)"></script>
+</body>
+</html>

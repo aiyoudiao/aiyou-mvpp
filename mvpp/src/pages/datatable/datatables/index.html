@@ -1,0 +1,40 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:57
+ * @LastEditTime : 2020-01-22 16:51:25
+ * @LastEditors  : ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	@require(<%'./@my-component/core/header.html'%>, <%{title: 'Datatables'}%>)
+	<link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
+	<script type="text/javascript" src="@request(<%'/static/lib/loading/okLoading.js'%>)"></script>
+	<link rel="stylesheet" href="@request(<%'/static/lib/datatables/media/css/jquery.dataTables.min.css'%>)">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="@request(<%'/static/lib/datatables/media/css/dataTables.jqueryui.css'%>)">
+</head>
+<body>
+<div class="ok-body">
+	<!--模糊搜索区域-->
+	<div class="layui-row">
+		<form class="layui-form layui-col-md12 ok-search">
+			<input class="layui-input" placeholder="开始日期" autocomplete="off" id="startTime" name="startTime">
+			<input class="layui-input" placeholder="截止日期" autocomplete="off" id="endTime" name="endTime">
+			<input class="layui-input" placeholder="账号" autocomplete="off" name="username">
+			<button class="layui-btn" lay-submit="" lay-filter="search">
+				<i class="layui-icon">&#xe615;</i>
+			</button>
+		</form>
+	</div>
+	<!--数据表格-->
+	<table id="userTable" class="table table-striped table-bordered" cellspacing="0" width="100%"/>
+</div>
+@require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+<script src="@request(<%'/static/lib/datatables/media/js/jquery.js'%>)"></script>
+<script src="@request(<%'/static/lib/datatables/media/js/jquery.dataTables.min.js'%>)"></script>
+<script src="@request(<%'/static/lib/datatables/media/js/dataTables.jqueryui.js'%>)"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/* 17 */
+@import './common/contrant.scss';
+
+/** 面包屑 **/
+.#{$HOST}-breadcrumb{visibility: hidden; font-size: 0;}
+.#{$HOST}-breadcrumb>*{font-size: 14px;}
+.#{$HOST}-breadcrumb a{color: #999 !important;}
+.#{$HOST}-breadcrumb a:hover{color: #5FB878 !important;}
+.#{$HOST}-breadcrumb a cite{color: #666; font-style: normal;}
+.#{$HOST}-breadcrumb span[lay-separator]{margin: 0 10px; color: #999;}

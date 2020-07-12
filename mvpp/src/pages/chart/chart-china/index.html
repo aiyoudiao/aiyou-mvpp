@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	@require(<%'./@my-component/core/header.html'%>, <%{title: '中国地图'}%>)
+	<script type="text/javascript" src="@request(<%'/static/lib/loading/okLoading.js'%>)"></script>
+	<link rel="stylesheet" href="@request(<%'/static/css/common.css'%>)"/>
+	<link rel="stylesheet" href="@request(<%'/static/lib/layui/css/layui.css'%>)" media="all"/>
+	<script type="text/javascript" src="@request(<%'/static/lib/echarts/echarts.min.js'%>)"></script>
+	<script type="text/javascript" src="@request(<%'/static/lib/echarts/world/js/china.js'%>)"></script>
+</head>
+<body class="childrenBody ok-body-scroll">
+<div class="layui-row layui-col-space15">
+	<div class="layui-col-md6">
+		<div class="layui-card">
+			<div class="map" id="chinaChart1"></div>
+		</div>
+	</div>
+	<div class="layui-col-md6">
+		<div class="layui-card">
+			<div class="map" id="chinaChart2"></div>
+		</div>
+	</div>
+	<div class="layui-col-md6">
+		<div class="layui-card">
+			<div class="map" id="chinaChart3"></div>
+		</div>
+	</div>
+	<div class="layui-col-md6">
+		<div class="layui-card">
+			<div class="map" id="chinaChart4"></div>
+		</div>
+	</div>
+</div>
+@require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+</html>
+
+

@@ -1,0 +1,46 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:58
+ * @LastEditTime : 2020-01-22 15:50:19
+ * @LastEditors  : ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    @require(<%'./@my-component/core/header.html'%>, <%{title: 'okMd5'}%>)
+    <link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
+</head>
+<body>
+    <div class="ok-body">
+        <blockquote class="layui-elem-quote">
+            <p>JavaScript版本的MD5实现</p>
+        </blockquote>
+        <pre>
+layui.use(["okMd5"], function () {
+    let okMd5 = layui.okMd5;
+    <br/>
+
+    // 计算给定字符串值的（十六进制编码的）MD5哈希值
+    let hash = okMd5("hello");
+    console.log(hash);
+
+    // 计算给定字符串值和key的（十六进制编码的）HMAC-MD5哈希值
+    let hash2 = okMd5("hello", "word");
+    console.log(hash2);
+
+    // 计算给定字符串值的原始MD5哈希值
+    let hash3 = okMd5("hello", null, true)
+    console.log(hash3);
+
+    // 计算给定字符串值和key的原始HMAC-MD5哈希值
+    let hash4 = okMd5("hello", "word", true)
+    console.log(hash4);
+});
+        </pre>
+    </div>
+
+    @require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+</html>

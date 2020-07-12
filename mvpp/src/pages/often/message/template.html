@@ -1,0 +1,31 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-22 14:08:07
+ * @LastEditTime: 2020-01-22 14:08:10
+ * @LastEditors: ilovejwl
+ -->
+<!-- 头工具栏模板 -->
+<script type="text/html" id="toolbarTpl">
+	<div class="layui-btn-container">
+		<div class="layui-inline" lay-event="batchDelete"><i class="layui-icon">&#xe640;</i></div>
+	</div>
+</script>
+<!-- 行工具栏模板 -->
+<script type="text/html" id="operationTpl">
+	<a href="javascript:" title="编辑" lay-event="updateById"><i class="layui-icon">&#xe642;</i></a>
+	<a href="javascript:" title="删除" lay-event="deleteById"><i class="layui-icon">&#xe640;</i></a>
+</script>
+<!-- 链接 -->
+<script type="text/html" id="urlTpl">
+	<a href="{{d.url}}" target="_blank">{{d.url}}</a>
+</script>
+<!-- 状态-->
+<script type="text/html" id="statusTpl">
+	{{#  if(d.status == 0){ }}
+	<span class="layui-btn layui-btn-normal layui-btn-xs">已读</span>
+	{{#  } else if(d.status == 1) { }}
+	<span class="layui-btn layui-btn-warm layui-btn-xs">未读</span>
+	{{#  } }}
+</script>

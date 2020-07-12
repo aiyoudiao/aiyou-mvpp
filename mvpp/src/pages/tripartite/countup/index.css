@@ -1,0 +1,16 @@
+.ok-body {
+    padding: 20px;
+ }
+
+ blockquote {
+    font-size: 16px;
+ }
+ .b1 {
+    border: 1px solid #EAEBF0;
+ }
+ .layui-card-header {
+    font-size: 16px;
+ }
+ .layui-card-body {
+    font-size: 20px;
+ }

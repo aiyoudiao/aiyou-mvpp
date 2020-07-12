@@ -1,0 +1,27 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:58
+ * @LastEditTime : 2020-01-22 16:06:01
+ * @LastEditors  : ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    @require(<%'./@my-component/core/header.html'%>, <%{title: 'layedit'}%>)
+    <link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
+</head>
+<body>
+    <div class="ok-body">
+        <textarea id="editor" style="display: none;">
+            <p>欢迎使用 <b>aiyou-admin v2.0</b> <a href="javascript:;" target="_blank">Link</a> </p>
+        </textarea>
+        <br/>
+        <button type="button" class="layui-btn" id="contentBtn">获取HTML内容</button>
+        <button type="button" class="layui-btn" id="textBtn">获取TEXT内容</button>
+        <button type="button" class="layui-btn" id="selectionBtn">获取选中文本内容</button>
+    </div>
+    @require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+</html>

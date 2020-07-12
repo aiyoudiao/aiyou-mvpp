@@ -1,0 +1,38 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-22 14:12:14
+ * @LastEditTime: 2020-01-22 14:12:17
+ * @LastEditors: ilovejwl
+ -->
+<!-- 头工具栏模板 -->
+<script type="text/html" id="toolbarTpl">
+	<div class="layui-btn-container">
+		<button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="batchStart">批量开始</button>
+		<button class="layui-btn layui-btn-sm layui-btn-warm" lay-event="batchEnd">批量结束</button>
+		<button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="batchDelete">批量删除</button>
+		<button class="layui-btn layui-btn-sm" lay-event="add">添加任务</button>
+	</div>
+</script>
+<!-- 行工具栏模板 -->
+<script type="text/html" id="operationTpl">
+	<a href="javascript:" title="编辑" lay-event="updateById"><i class="layui-icon">&#xe642;</i></a>
+	<a href="javascript:" title="删除" lay-event="deleteById"><i class="layui-icon">&#xe640;</i></a>
+</script>
+<!-- 任务进度 -->
+<script type="text/html" id="progressTpl">
+	<div class="layui-progress" style="top: 8px">
+		<div class="layui-progress-bar" lay-percent="{{d.progress}}"></div>
+	</div>
+</script>
+<!-- 任务状态 -->
+<script type="text/html" id="statusTpl">
+	{{#  if(d.status == 0){ }}
+	<span class="layui-btn layui-btn-normal layui-btn-xs">未开始</span>
+	{{#  } else if(d.status == 1) { }}
+	<span class="layui-btn layui-btn-warm layui-btn-xs">进行中</span>
+	{{#  } else if(d.status == 2) { }}
+	<span class="layui-btn layui-btn-danger layui-btn-xs">已完成</span>
+	{{#  } }}
+</script>

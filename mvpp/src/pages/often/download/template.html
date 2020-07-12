@@ -1,0 +1,44 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-22 13:37:44
+ * @LastEditTime: 2020-01-22 13:37:47
+ * @LastEditors: ilovejwl
+ -->
+<!-- 头工具栏模板 -->
+<script type="text/html" id="toolbarTpl">
+	<div class="layui-btn-container">
+		<button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="batchEnabled">批量上架</button>
+		<button class="layui-btn layui-btn-sm layui-btn-warm" lay-event="batchDisabled">批量下架</button>
+		<button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="batchDelete">批量删除</button>
+		<button class="layui-btn layui-btn-sm" lay-event="add">添加下载</button>
+	</div>
+</script>
+<!-- 行工具栏模板 -->
+<script type="text/html" id="operationTpl">
+	<a href="javascript:" title="编辑" lay-event="updateById"><i class="layui-icon">&#xe642;</i></a>
+	<a href="javascript:" title="删除" lay-event="deleteById"><i class="layui-icon">&#xe640;</i></a>
+</script>
+<!-- 链接 -->
+<script type="text/html" id="urlTpl">
+	<a href="{{d.url}}" target="_blank">{{d.url}}</a>
+</script>
+<!-- 是否推荐 -->
+<script type="text/html" id="recommendTpl">
+	{{#  if(d.recommend == 0){ }}
+	<span class="layui-btn layui-btn-normal layui-btn-xs">已推荐</span>
+	{{#  } else if(d.recommend == 1) { }}
+	<span class="layui-btn layui-btn-warm layui-btn-xs">未推荐</span>
+	{{#  } }}
+</script>
+<!-- 状态-->
+<script type="text/html" id="statusTpl">
+	{{#  if(d.status == 0){ }}
+	<span class="layui-btn layui-btn-normal layui-btn-xs">已发布</span>
+	{{#  } else if(d.status == 1) { }}
+	<span class="layui-btn layui-btn-warm layui-btn-xs">未下架</span>
+	{{#  } else if(d.status == 2) { }}
+	<span class="layui-btn layui-btn-warm layui-btn-xs">已删除</span>
+	{{#  } }}
+</script>

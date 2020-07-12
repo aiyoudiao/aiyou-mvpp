@@ -1,0 +1,17 @@
+/* 20 */
+@import './common/contrant.scss';
+
+/* 小徽章 */
+.#{$HOST}-badge,
+.#{$HOST}-badge-dot,
+.#{$HOST}-badge-rim{position:relative; display: inline-block; padding: 0 6px; font-size: 12px; text-align: center; background-color: #FF5722; color: #fff; border-radius: 2px;}
+.#{$HOST}-badge{height: 18px; line-height: 18px;}
+.#{$HOST}-badge-dot{width: 8px; height: 8px; padding: 0; border-radius: 50%;}
+.#{$HOST}-badge-rim{height: 18px; line-height: 18px; border-width: 1px; border-style: solid; background-color: #fff; color: #666;}
+
+.#{$HOST}-btn .#{$HOST}-badge,
+.#{$HOST}-btn .#{$HOST}-badge-dot{margin-left: 5px;}
+.#{$HOST}-nav .#{$HOST}-badge,
+.#{$HOST}-nav .#{$HOST}-badge-dot{position: absolute; top: 50%; margin: -8px 6px 0;}
+.#{$HOST}-tab-title .#{$HOST}-badge,
+.#{$HOST}-tab-title .#{$HOST}-badge-dot{left: 5px; top: -2px;}

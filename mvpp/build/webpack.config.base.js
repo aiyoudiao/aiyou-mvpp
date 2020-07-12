@@ -58,9 +58,9 @@ const webpackBaseConfig = {
 
                         // },
 
-                        query: {
-                            attributes: ['img:src', 'x-img:src']
-                        }
+                        // query: {
+                        //     // attributes: ['img:src', 'x-img:src']
+                        // }
                     }
 
                 ],

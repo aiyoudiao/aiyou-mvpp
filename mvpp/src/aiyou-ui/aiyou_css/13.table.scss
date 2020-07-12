@@ -1,0 +1,157 @@
+/* 13 */
+@import './common/contrant.scss';
+
+/** 表格 **/
+.#{$HOST}-table{width: 100%; margin: 10px 0; background-color: #fff; color: #666;}
+.#{$HOST}-table tr{transition: all .3s; -webkit-transition: all .3s;}
+.#{$HOST}-table th{text-align: left; font-weight: 400;}
+
+.#{$HOST}-table thead tr,
+.#{$HOST}-table-header,
+.#{$HOST}-table-tool,
+.#{$HOST}-table-total,
+.#{$HOST}-table-total tr,
+.#{$HOST}-table-patch,
+.#{$HOST}-table-mend,
+.#{$HOST}-table[lay-even] tr:nth-child(even),
+.#{$HOST}-table tbody tr:hover,
+.#{$HOST}-table-hover,
+.#{$HOST}-table-click{background-color: #f2f2f2;}
+
+.#{$HOST}-table th,
+.#{$HOST}-table td,
+.#{$HOST}-table[lay-skin="line"],
+.#{$HOST}-table[lay-skin="row"],
+.#{$HOST}-table-view,
+.#{$HOST}-table-tool,
+.#{$HOST}-table-header,
+.#{$HOST}-table-col-set,
+.#{$HOST}-table-total,
+.#{$HOST}-table-page,
+.#{$HOST}-table-fixed-r,
+.#{$HOST}-table-tips-main,
+.#{$HOST}-table-grid-down{border-width: 1px; border-style: solid; border-color: #e6e6e6;}
+
+.#{$HOST}-table th, .#{$HOST}-table td{position: relative; padding: 9px 15px; min-height: 20px; line-height: 20px;  font-size: 14px;}
+
+.#{$HOST}-table[lay-skin="line"] th, .#{$HOST}-table[lay-skin="line"] td{border-width: 0; border-bottom-width: 1px;}
+.#{$HOST}-table[lay-skin="row"] th, .#{$HOST}-table[lay-skin="row"] td{border-width: 0;border-right-width: 1px;}
+.#{$HOST}-table[lay-skin="nob"] th, .#{$HOST}-table[lay-skin="nob"] td{border: none;}
+
+.#{$HOST}-table img{max-width:100px;}
+
+/* 大表格 */.#{$HOST}-table[lay-size="lg"] th,
+.#{$HOST}-table[lay-size="lg"] td{padding-top: 15px; padding-right: 30px; padding-bottom: 15px; padding-left: 30px;}
+.#{$HOST}-table-view .#{$HOST}-table[lay-size="lg"] .#{$HOST}-table-cell{height: 40px; line-height: 40px;}  
+/* 小表格 */.#{$HOST}-table[lay-size="sm"] th,
+.#{$HOST}-table[lay-size="sm"] td{padding-top: 5px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; font-size: 12px;}
+.#{$HOST}-table-view .#{$HOST}-table[lay-size="sm"] .#{$HOST}-table-cell{height: 20px; line-height: 20px;} 
+
+/* 数据表格 */
+.#{$HOST}-table[lay-data]{display: none;}
+.#{$HOST}-table-box{position: relative; overflow: hidden;}
+.#{$HOST}-table-view{margin: 10px 0;}
+.#{$HOST}-table-view .#{$HOST}-table{position: relative; width: auto; margin: 0;}
+.#{$HOST}-table-view .#{$HOST}-table[lay-skin="line"]{border-width: 0; border-right-width: 1px;}
+.#{$HOST}-table-view .#{$HOST}-table[lay-skin="row"]{border-width: 0; border-bottom-width: 1px;}
+.#{$HOST}-table-view .#{$HOST}-table th,
+.#{$HOST}-table-view .#{$HOST}-table td{padding: 5px 0; border-top: none; border-left: none;}
+.#{$HOST}-table-view .#{$HOST}-table th.#{$HOST}-unselect .#{$HOST}-table-cell span{cursor: pointer;}
+.#{$HOST}-table-view .#{$HOST}-table td{cursor: default;}
+.#{$HOST}-table-view .#{$HOST}-table td[data-edit="text"]{cursor: text;}
+.#{$HOST}-table-view .#{$HOST}-form-checkbox[lay-skin="primary"] i{width: 18px; height: 18px;}
+.#{$HOST}-table-view .#{$HOST}-form-radio{line-height: 0; padding: 0;}
+.#{$HOST}-table-view .#{$HOST}-form-radio>i{margin: 0; font-size: 20px;}
+.#{$HOST}-table-init{position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center; z-index: 110;}
+.#{$HOST}-table-init .#{$HOST}-icon{position: absolute; left: 50%; top: 50%; margin: -15px 0 0 -15px; font-size: 30px; color: #c2c2c2;}
+.#{$HOST}-table-header{border-width: 0; border-bottom-width: 1px; overflow: hidden;}
+.#{$HOST}-table-header .#{$HOST}-table{margin-bottom: -1px;}
+
+.#{$HOST}-table-tool .#{$HOST}-inline[lay-event]{position: relative; width: 26px; height: 26px; padding: 5px; line-height: 16px; margin-right: 10px; text-align: center; color: #333; border: 1px solid #ccc; cursor: pointer; -webkit-transition: .5s all; transition: .5s all;}
+.#{$HOST}-table-tool .#{$HOST}-inline[lay-event]:hover{border: 1px solid #999;}
+.#{$HOST}-table-tool-temp{padding-right: 120px;}
+.#{$HOST}-table-tool-self{position: absolute; right: 17px; top: 10px;}
+.#{$HOST}-table-tool .#{$HOST}-table-tool-self .#{$HOST}-inline[lay-event]{margin: 0 0 0 10px;}
+.#{$HOST}-table-tool-panel{position: absolute; top: 29px; left: -1px; padding: 5px 0; min-width: 150px; min-height: 40px; border: 1px solid #d2d2d2; text-align: left; overflow-y: auto; background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,.12);}
+.#{$HOST}-table-tool-panel li{padding: 0 10px; line-height: 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; -webkit-transition: .5s all; transition: .5s all;}
+.#{$HOST}-table-tool-panel li .#{$HOST}-form-checkbox[lay-skin="primary"]{width: 100%;}
+.#{$HOST}-table-tool-panel li:hover{background-color: #f2f2f2;}
+.#{$HOST}-table-tool-panel li .#{$HOST}-form-checkbox[lay-skin="primary"]{padding-left: 28px;}
+.#{$HOST}-table-tool-panel li .#{$HOST}-form-checkbox[lay-skin="primary"] i{position: absolute; left: 0; top: 0;}
+.#{$HOST}-table-tool-panel li .#{$HOST}-form-checkbox[lay-skin="primary"] span{padding: 0;}
+.#{$HOST}-table-tool .#{$HOST}-table-tool-self .#{$HOST}-table-tool-panel{left: auto; right: -1px;}
+
+.#{$HOST}-table-col-set{position: absolute; right: 0; top: 0; width: 20px; height: 100%; border-width: 0; border-left-width: 1px; background-color: #fff;}
+
+.#{$HOST}-table-sort{width: 10px; height: 20px; margin-left: 5px; cursor: pointer!important;}
+.#{$HOST}-table-sort .#{$HOST}-edge{position: absolute; left: 5px; border-width: 5px;}
+.#{$HOST}-table-sort .#{$HOST}-table-sort-asc{top: 3px; border-top: none; border-bottom-style: solid; border-bottom-color: #b2b2b2;}
+.#{$HOST}-table-sort .#{$HOST}-table-sort-asc:hover{border-bottom-color: #666;}
+.#{$HOST}-table-sort .#{$HOST}-table-sort-desc{bottom: 5px; border-bottom: none; border-top-style: solid; border-top-color: #b2b2b2;}
+.#{$HOST}-table-sort .#{$HOST}-table-sort-desc:hover{border-top-color: #666;}
+.#{$HOST}-table-sort[lay-sort="asc"] .#{$HOST}-table-sort-asc{border-bottom-color: #000;}
+.#{$HOST}-table-sort[lay-sort="desc"] .#{$HOST}-table-sort-desc{border-top-color: #000;}
+
+.#{$HOST}-table-cell{height: 28px; line-height: 28px; padding: 0 15px; position: relative; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; box-sizing: border-box;}
+.#{$HOST}-table-cell .#{$HOST}-form-checkbox[lay-skin="primary"]{top: -1px; padding: 0;}
+.#{$HOST}-table-cell .#{$HOST}-table-link{color: #01AAED;}
+
+.laytable-cell-checkbox,
+.laytable-cell-radio,
+.laytable-cell-space,
+.laytable-cell-numbers{padding: 0; text-align: center;}
+
+.#{$HOST}-table-body{position: relative; overflow: auto; margin-right: -1px; margin-bottom: -1px;}
+.#{$HOST}-table-body .#{$HOST}-none{line-height: 26px; padding: 15px; text-align: center; color: #999;}
+.#{$HOST}-table-fixed{position: absolute; left: 0; top: 0; z-index: 101;}
+.#{$HOST}-table-fixed .#{$HOST}-table-body{overflow: hidden;}
+.#{$HOST}-table-fixed-l{box-shadow: 0 -1px 8px rgba(0,0,0,.08);}
+.#{$HOST}-table-fixed-r{left: auto; right: -1px; border-width: 0; border-left-width: 1px; box-shadow: -1px 0 8px rgba(0,0,0,.08);}
+.#{$HOST}-table-fixed-r .#{$HOST}-table-header{position: relative; overflow: visible;}
+.#{$HOST}-table-mend{position: absolute; right: -49px; top: 0; height: 100%; width: 50px;}
+
+.#{$HOST}-table-tool{position: relative; z-index: 890; width: 100%; min-height: 50px; line-height: 30px; padding: 10px 15px; border-width: 0; border-bottom-width: 1px;}
+.#{$HOST}-table-tool .#{$HOST}-btn-container{margin-bottom: -10px;}
+
+.#{$HOST}-table-total{margin-bottom: -1px; border-width: 0; border-top-width: 1px; overflow: hidden;}
+
+
+.#{$HOST}-table-page{position: relative; width: 100%; padding: 7px 7px 0; border-width: 0; border-top-width: 1px; height: 41px; margin-bottom: -1px; font-size: 12px; white-space: nowrap; overflow: hidden;}
+.#{$HOST}-table-page>div{height: 26px;}
+.#{$HOST}-table-page .#{$HOST}-laypage{margin: 0;}
+.#{$HOST}-table-page .#{$HOST}-laypage a,
+.#{$HOST}-table-page .#{$HOST}-laypage span{height: 26px; line-height: 26px; margin-bottom: 10px; border: none; background: none;}
+.#{$HOST}-table-page .#{$HOST}-laypage a,
+.#{$HOST}-table-page .#{$HOST}-laypage span.#{$HOST}-laypage-curr{padding: 0 12px;}
+.#{$HOST}-table-page .#{$HOST}-laypage span{margin-left: 0; padding: 0;}
+.#{$HOST}-table-page .#{$HOST}-laypage .#{$HOST}-laypage-prev{margin-left: -7px!important;}
+.#{$HOST}-table-page .#{$HOST}-laypage .#{$HOST}-laypage-curr .#{$HOST}-laypage-em{left: 0; top: 0; padding: 0;}
+.#{$HOST}-table-page .#{$HOST}-laypage input,
+.#{$HOST}-table-page .#{$HOST}-laypage button{height: 26px; line-height: 26px; }
+.#{$HOST}-table-page .#{$HOST}-laypage input{width: 40px;}
+.#{$HOST}-table-page .#{$HOST}-laypage button{padding: 0 10px;}
+.#{$HOST}-table-page select{height: 18px;}
+.#{$HOST}-table-view select[lay-ignore]{display: inline-block;}
+
+.#{$HOST}-table-patch .#{$HOST}-table-cell{padding: 0; width: 30px;}
+
+.#{$HOST}-table-edit{position: absolute; left: 0; top: 0; width: 100%; height: 100%; padding: 0 14px 1px; border-radius: 0; box-shadow: 1px 1px 20px rgba(0,0,0,.15)}
+.#{$HOST}-table-edit:focus{border-color: #5FB878!important;}
+select.#{$HOST}-table-edit{padding: 0 0 0 10px; border-color: #C9C9C9;}
+.#{$HOST}-table-view .#{$HOST}-form-switch,
+.#{$HOST}-table-view .#{$HOST}-form-checkbox,
+.#{$HOST}-table-view .#{$HOST}-form-radio{top: 0; margin: 0; box-sizing: content-box;}
+.#{$HOST}-table-view .#{$HOST}-form-checkbox{top: -1px; height: 26px; line-height: 26px;}
+.#{$HOST}-table-view .#{$HOST}-form-checkbox i{height: 26px;}
+
+/* 展开溢出的单元格 */
+.#{$HOST}-table-grid .#{$HOST}-table-cell{overflow: visible;}
+.#{$HOST}-table-grid-down{position: absolute; top: 0; right: 0; width: 26px; height: 100%; padding: 5px 0; border-width: 0; border-left-width: 1px; text-align: center; background-color: #fff; color: #999; cursor: pointer;}
+.#{$HOST}-table-grid-down .#{$HOST}-icon{position: absolute; top: 50%; left: 50%; margin: -8px 0 0 -8px;}
+.#{$HOST}-table-grid-down:hover{background-color: #fbfbfb;}
+
+body .#{$HOST}-table-tips .#{$HOST}-layer-content{background: none; padding: 0; box-shadow: 0 1px 6px rgba(0,0,0,.12);}
+.#{$HOST}-table-tips-main{margin: -44px 0 0 -1px; max-height: 150px; padding: 8px 15px; font-size: 14px; overflow-y: scroll; background-color: #fff; color: #666;}
+.#{$HOST}-table-tips-c{position: absolute; right: -3px; top: -13px; width: 20px; height: 20px; padding: 3px; cursor: pointer; background-color: #666; border-radius: 50%; color: #fff;}
+.#{$HOST}-table-tips-c:hover{background-color: #777;}
+.#{$HOST}-table-tips-c:before{position: relative; right: -2px;}

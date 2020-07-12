@@ -1,0 +1,31 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:57
+ * @LastEditTime : 2020-01-21 22:08:17
+ * @LastEditors  : ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+   @require(<%'./@my-component/core/header.html'%>, <%{title: '导航的图标'}%>)
+   <link rel="stylesheet" href="@request(<%'/static/lib/layui/css/layui.css'%>)">
+</head>
+<body>
+<div class="ok-body">
+   <blockquote class="layui-elem-quote">
+      <p>主要讲述如何设置导航的图标。</p>
+   </blockquote>
+   <blockquote class="layui-elem-quote layui-quote-nm">
+      <p>特别注意：必须要遵守指定的写法</p>
+      <p>1.默认的图标指向的值layui内置图标</p>
+      <p>2.要想使用ok-icon图标必须设置navs.json中的fontFamily属性和icon属性</p>
+   </blockquote>
+   @require(<%'./template.html'%>, <%{}%>)
+</div>
+@require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+</html>
+
+

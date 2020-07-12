@@ -1,0 +1,85 @@
+/* 29 */
+@import './common/contrant.scss';
+
+
+/** 动画 **/
+.#{$HOST}-anim{-webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-animation-fill-mode: both; animation-fill-mode: both;}
+.#{$HOST}-anim.#{$HOST}-icon{display: inline-block;}
+.#{$HOST}-anim-loop{-webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;}
+.#{$HOST}-trans,
+.#{$HOST}-trans a{transition: all .3s; -webkit-transition: all .3s;} /* 过度变换 */
+
+@-webkit-keyframes #{$HOST}-rotate{ /* 循环旋转 */
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@keyframes #{$HOST}-rotate{
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+.#{$HOST}-anim-rotate{-webkit-animation-name: #{$HOST}-rotate; animation-name: #{$HOST}-rotate; -webkit-animation-duration: 1s; animation-duration: 1s;  -webkit-animation-timing-function: linear; animation-timing-function: linear;}
+
+@-webkit-keyframes #{$HOST}-up{ /* 从最底部往上滑入 */
+  from {-webkit-transform: translate3d(0, 100%, 0); opacity: 0.3;}
+  to {-webkit-transform: translate3d(0, 0, 0);  opacity: 1;}
+}
+@keyframes #{$HOST}-up{
+  from {transform: translate3d(0, 100%, 0);  opacity: 0.3;}
+  to {transform: translate3d(0, 0, 0);  opacity: 1;}
+}
+.#{$HOST}-anim-up{-webkit-animation-name: #{$HOST}-up; animation-name: #{$HOST}-up;}
+
+@-webkit-keyframes #{$HOST}-upbit{ /* 微微往上滑入 */
+  from {-webkit-transform: translate3d(0, 30px, 0); opacity: 0.3;}
+  to {-webkit-transform: translate3d(0, 0, 0);  opacity: 1;}
+}
+@keyframes #{$HOST}-upbit{
+  from {transform: translate3d(0, 30px, 0);  opacity: 0.3;}
+  to {transform: translate3d(0, 0, 0);  opacity: 1;}
+}
+.#{$HOST}-anim-upbit{-webkit-animation-name: #{$HOST}-upbit; animation-name: #{$HOST}-upbit;}
+
+
+@-webkit-keyframes #{$HOST}-scale { /* 放大 */
+  0% {opacity: 0.3; -webkit-transform: scale(.5);}
+  100% {opacity: 1; -webkit-transform: scale(1);}
+}
+@keyframes #{$HOST}-scale {
+  0% {opacity: 0.3; -ms-transform: scale(.5); transform: scale(.5);}
+  100% {opacity: 1; -ms-transform: scale(1); transform: scale(1);}
+}
+.#{$HOST}-anim-scale{-webkit-animation-name: #{$HOST}-scale; animation-name: #{$HOST}-scale}
+
+@-webkit-keyframes #{$HOST}-scale-spring { /* 弹簧式放大 */
+  0% {opacity: 0.5; -webkit-transform: scale(.5);}
+  80% {opacity: 0.8; -webkit-transform: scale(1.1);}
+  100% {opacity: 1; -webkit-transform: scale(1);}
+}
+@keyframes #{$HOST}-scale-spring {
+  0% {opacity: 0.5; transform: scale(.5);}
+  80% {opacity: 0.8; transform: scale(1.1);}
+  100% {opacity: 1; transform: scale(1);}
+}
+.#{$HOST}-anim-scaleSpring{-webkit-animation-name: #{$HOST}-scale-spring; animation-name: #{$HOST}-scale-spring}
+
+@-webkit-keyframes #{$HOST}-fadein { /* 渐现 */
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes #{$HOST}-fadein {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.#{$HOST}-anim-fadein{-webkit-animation-name: #{$HOST}-fadein; animation-name: #{$HOST}-fadein}
+
+@-webkit-keyframes #{$HOST}-fadeout { /* 渐隐 */
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes #{$HOST}-fadeout {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+.#{$HOST}-anim-fadeout{-webkit-animation-name: #{$HOST}-fadeout; animation-name: #{$HOST}-fadeout}
+
+

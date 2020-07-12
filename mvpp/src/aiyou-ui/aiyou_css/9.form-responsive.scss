@@ -1,0 +1,12 @@
+/* 9 */
+@import './common/contrant.scss';
+
+/** 表单响应式 **/
+@media screen and (max-width: 450px) {
+    .#{$HOST}-form-item .#{$HOST}-form-label{text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+    .#{$HOST}-form-item .#{$HOST}-inline{display: block; margin-right: 0; margin-bottom: 20px; clear: both;}
+    .#{$HOST}-form-item .#{$HOST}-inline:after{content:'\20'; clear:both; display:block; height:0;}
+    .#{$HOST}-form-item .#{$HOST}-input-inline{display: block; float: none; left: -3px; width: auto; margin: 0 0 10px 112px; }
+    .#{$HOST}-form-item .#{$HOST}-input-inline+.#{$HOST}-form-mid{margin-left: 110px; top: -5px; padding: 0;}
+    .#{$HOST}-form-item .#{$HOST}-form-checkbox{margin-right: 5px; margin-bottom: 5px;}
+  }

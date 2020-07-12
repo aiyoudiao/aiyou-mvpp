@@ -1,0 +1,63 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-21 17:22:58
+ * @LastEditTime : 2020-01-22 17:19:27
+ * @LastEditors  : ilovejwl
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    @require(<%'./@my-component/core/header.html'%>, <%{title: 'okToastr'}%>)
+    <link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)">
+</head>
+<body>
+    <div class="ok-body">
+        <blockquote class="layui-elem-quote">
+            <p>toastr是非阻塞通知的JavaScript库</p>
+        </blockquote>
+        <pre>
+layui.use(["okToastr"], function () {
+    // 引入okToastr
+    let okToastr = layui.okToastr;
+    // 是否显示关闭按钮
+    okToastr.options.closeButton = true;
+    // 回调函数
+    okToastr.options.onShown = function () {
+        console.log("hello");
+    }
+    okToastr.options.onHidden = function () {
+        console.log("goodbye");
+    }
+    okToastr.options.onclick = function () {
+        console.log("clicked");
+    }
+    okToastr.options.onCloseClick = function () {
+        console.log("close button clicked");
+    }
+    <br/>
+    // info
+    okToastr.info("aiyou-admin");
+    // success
+    okToastr.success("aiyou-admin");
+    // warning
+    okToastr.warning("aiyou-admin");
+    // error
+    okToastr.error("aiyou-admin");
+    // remove
+    okToastr.remove();
+    // clear
+    okToastr.clear();
+});
+        </pre>
+        <button type="button" class="layui-btn" id="info">info</button>
+        <button type="button" class="layui-btn" id="success">success</button>
+        <button type="button" class="layui-btn" id="warning">warning</button>
+        <button type="button" class="layui-btn" id="error">error</button>
+        <button type="button" class="layui-btn" id="remove">remove</button>
+        <button type="button" class="layui-btn" id="clear">clear</button>
+    </div>
+    @require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+</html>

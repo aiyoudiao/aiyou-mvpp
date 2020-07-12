@@ -1,0 +1,11 @@
+/* 25 */
+@import './common/contrant.scss';
+
+/** 评分组件 By star1029 **/
+.#{$HOST}-rate,
+.#{$HOST}-rate *{display: inline-block; vertical-align: middle;}
+.#{$HOST}-rate{padding: 10px 5px 10px 0; font-size: 0;}
+.#{$HOST}-rate li i.#{$HOST}-icon{ font-size: 20px; color: #FFB800;}
+.#{$HOST}-rate li i.#{$HOST}-icon{margin-right: 5px; transition: all .3s; -webkit-transition: all .3s;}
+.#{$HOST}-rate li i:hover{cursor: pointer; transform: scale(1.12); -webkit-transform: scale(1.12);}
+.#{$HOST}-rate[readonly] li i:hover{cursor: default; transform: scale(1);}

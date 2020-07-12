@@ -1,0 +1,17 @@
+.forget .tit {
+  padding-top: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.forget .code-box {
+  display: flex;
+}
+
+.forget .code-box .btn-auth-code {
+  margin-left: 10px;
+}
+
+.reset-password-form {
+  display: none;
+}

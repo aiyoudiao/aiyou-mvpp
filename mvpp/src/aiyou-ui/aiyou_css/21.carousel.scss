@@ -1,0 +1,60 @@
+/* 21 */
+@import './common/contrant.scss';
+
+/* carousel 轮播 */
+.#{$HOST}-carousel{position: relative; left: 0; top: 0; background-color: #f8f8f8;}
+.#{$HOST}-carousel>*[carousel-item]{position: relative; width: 100%; height: 100%; overflow: hidden;}
+.#{$HOST}-carousel>*[carousel-item]:before{position: absolute; content: '\e63d'; left: 50%; top: 50%; width: 100px; line-height: 20px; margin: -10px 0 0 -50px; text-align: center; color: #c2c2c2; font-family:"#{$HOST}-icon" !important; font-size: 30px; font-style: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+.#{$HOST}-carousel>*[carousel-item] > *{display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #f8f8f8; transition-duration: .3s; -webkit-transition-duration: .3s;}
+.#{$HOST}-carousel-updown > *{-webkit-transition: .3s ease-in-out up; transition: .3s ease-in-out up;}
+.#{$HOST}-carousel-arrow{display: none\0; opacity: 0; position: absolute; left: 10px; top: 50%; margin-top: -18px; width: 36px; height: 36px; line-height: 36px; text-align: center; font-size: 20px; border: none 0; border-radius: 50%; background-color: rgba(0,0,0,.2); color: #fff; -webkit-transition-duration: .3s; transition-duration: .3s; cursor: pointer;}
+.#{$HOST}-carousel-arrow[lay-type="add"]{left: auto!important; right: 10px;}
+.#{$HOST}-carousel[lay-arrow="always"] .#{$HOST}-carousel-arrow{opacity: 1; left: 20px;}
+.#{$HOST}-carousel[lay-arrow="always"] .#{$HOST}-carousel-arrow[lay-type="add"]{right: 20px;}
+.#{$HOST}-carousel[lay-arrow="none"] .#{$HOST}-carousel-arrow{display: none;}
+.#{$HOST}-carousel-arrow:hover,
+.#{$HOST}-carousel-ind ul:hover{background-color: rgba(0,0,0,.35);}
+.#{$HOST}-carousel:hover .#{$HOST}-carousel-arrow{display: block\0; opacity: 1; left: 20px;}
+.#{$HOST}-carousel:hover .#{$HOST}-carousel-arrow[lay-type="add"]{right: 20px;}
+.#{$HOST}-carousel-ind{position: relative; top: -35px; width: 100%; line-height: 0!important; text-align: center; font-size: 0;}
+.#{$HOST}-carousel[lay-indicator="outside"]{margin-bottom: 30px;}
+.#{$HOST}-carousel[lay-indicator="outside"] .#{$HOST}-carousel-ind{top: 10px;}
+.#{$HOST}-carousel[lay-indicator="outside"] .#{$HOST}-carousel-ind ul{background-color: rgba(0,0,0,.5);}
+.#{$HOST}-carousel[lay-indicator="none"] .#{$HOST}-carousel-ind{display: none;}
+.#{$HOST}-carousel-ind ul{display: inline-block; padding: 5px; background-color: rgba(0,0,0,.2); border-radius: 10px; -webkit-transition-duration: .3s; transition-duration: .3s;}
+.#{$HOST}-carousel-ind li{display: inline-block; width: 10px; height: 10px; margin: 0 3px; font-size: 14px; background-color: #e2e2e2; background-color: rgba(255,255,255,.5); border-radius: 50%; cursor: pointer; -webkit-transition-duration: .3s; transition-duration: .3s;}
+.#{$HOST}-carousel-ind li:hover{background-color: rgba(255,255,255,.7);}
+.#{$HOST}-carousel-ind li.#{$HOST}-this{background-color: #fff;}
+.#{$HOST}-carousel>*[carousel-item]>.#{$HOST}-this,
+.#{$HOST}-carousel>*[carousel-item]>.#{$HOST}-carousel-prev,
+.#{$HOST}-carousel>*[carousel-item]>.#{$HOST}-carousel-next{display: block}
+.#{$HOST}-carousel>*[carousel-item]>.#{$HOST}-this{left: 0;}
+.#{$HOST}-carousel>*[carousel-item]>.#{$HOST}-carousel-prev{left: -100%;}
+.#{$HOST}-carousel>*[carousel-item]>.#{$HOST}-carousel-next{left: 100%;}
+.#{$HOST}-carousel>*[carousel-item]>.#{$HOST}-carousel-prev.#{$HOST}-carousel-right,
+.#{$HOST}-carousel>*[carousel-item]>.#{$HOST}-carousel-next.#{$HOST}-carousel-left{left: 0;}
+.#{$HOST}-carousel>*[carousel-item]>.#{$HOST}-this.#{$HOST}-carousel-left{left: -100%;}
+.#{$HOST}-carousel>*[carousel-item]>.#{$HOST}-this.#{$HOST}-carousel-right{left: 100%;}
+
+/* 上下切换 */.#{$HOST}-carousel[lay-anim="updown"] .#{$HOST}-carousel-arrow{left: 50%!important; top: 20px; margin: 0 0 0 -18px;}
+.#{$HOST}-carousel[lay-anim="updown"] .#{$HOST}-carousel-arrow[lay-type="add"]{top: auto!important; bottom: 20px;}
+.#{$HOST}-carousel[lay-anim="updown"] .#{$HOST}-carousel-ind{position: absolute; top: 50%; right: 20px; width: auto; height: auto;}
+.#{$HOST}-carousel[lay-anim="updown"] .#{$HOST}-carousel-ind ul{padding: 3px 5px;}
+.#{$HOST}-carousel[lay-anim="updown"] .#{$HOST}-carousel-ind li{display: block; margin: 6px 0;}
+
+.#{$HOST}-carousel[lay-anim="updown"]>*[carousel-item]>*{left: 0!important;}
+.#{$HOST}-carousel[lay-anim="updown"]>*[carousel-item]>.#{$HOST}-this{top: 0;}
+.#{$HOST}-carousel[lay-anim="updown"]>*[carousel-item]>.#{$HOST}-carousel-prev{top: -100%;}
+.#{$HOST}-carousel[lay-anim="updown"]>*[carousel-item]>.#{$HOST}-carousel-next{top: 100%;}
+.#{$HOST}-carousel[lay-anim="updown"]>*[carousel-item]>.#{$HOST}-carousel-prev.#{$HOST}-carousel-right,
+.#{$HOST}-carousel[lay-anim="updown"]>*[carousel-item]>.#{$HOST}-carousel-next.#{$HOST}-carousel-left{top: 0;}
+.#{$HOST}-carousel[lay-anim="updown"]>*[carousel-item]>.#{$HOST}-this.#{$HOST}-carousel-left{top: -100%;}
+.#{$HOST}-carousel[lay-anim="updown"]>*[carousel-item]>.#{$HOST}-this.#{$HOST}-carousel-right{top: 100%;}
+
+/* 渐显切换 */.#{$HOST}-carousel[lay-anim="fade"]>*[carousel-item]>*{left: 0!important;}
+.#{$HOST}-carousel[lay-anim="fade"]>*[carousel-item]>.#{$HOST}-carousel-prev,
+.#{$HOST}-carousel[lay-anim="fade"]>*[carousel-item]>.#{$HOST}-carousel-next{opacity: 0;}
+.#{$HOST}-carousel[lay-anim="fade"]>*[carousel-item]>.#{$HOST}-carousel-prev.#{$HOST}-carousel-right,
+.#{$HOST}-carousel[lay-anim="fade"]>*[carousel-item]>.#{$HOST}-carousel-next.#{$HOST}-carousel-left{opacity: 1;}
+.#{$HOST}-carousel[lay-anim="fade"]>*[carousel-item]>.#{$HOST}-this.#{$HOST}-carousel-left,
+.#{$HOST}-carousel[lay-anim="fade"]>*[carousel-item]>.#{$HOST}-this.#{$HOST}-carousel-right{opacity: 0}

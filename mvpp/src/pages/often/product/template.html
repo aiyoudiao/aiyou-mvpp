@@ -1,0 +1,30 @@
+<!--
+ * @Descripttion: ilovejwl
+ * @version: 1.0.0
+ * @Author: ilovejwl
+ * @Date: 2020-01-22 14:10:20
+ * @LastEditTime: 2020-01-22 14:10:22
+ * @LastEditors: ilovejwl
+ -->
+<!-- 头工具栏模板 -->
+<script type="text/html" id="toolbarTpl">
+	<div class="layui-btn-container">
+		<button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="batchEnabled">批量上架</button>
+		<button class="layui-btn layui-btn-sm layui-btn-warm" lay-event="batchDisabled">批量下架</button>
+		<button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="batchDelete">批量删除</button>
+		<button class="layui-btn layui-btn-sm" lay-event="add">添加产品</button>
+	</div>
+</script>
+<!-- 行工具栏模板 -->
+<script type="text/html" id="operationTpl">
+	<a href="javascript:" title="编辑" lay-event="updateById"><i class="layui-icon">&#xe642;</i></a>
+	<a href="javascript:" title="删除" lay-event="deleteById"><i class="layui-icon">&#xe640;</i></a>
+</script>
+
+<script type="text/html" id="logoTpl">
+	<image src="{{d.logo}}"/>
+</script>
+
+<script type="text/html" id="urlTpl">
+	<a href="{{d.url}}" target="_blank">{{d.url}}</a>
+</script>

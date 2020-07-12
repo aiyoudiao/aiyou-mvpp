@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	@require(<%'./@my-component/core/header.html'%>, <%{title: '控制台1'}%>)
+	<link rel="stylesheet" href="@request(<%'/static/css/oksub.css'%>)" media="all" />
+	<script type="text/javascript" src="@request(<%'/static/lib/loading/okLoading.js'%>)"></script>
+	<script type="text/javascript" src="@request(<%'/static/lib/echarts/echarts.min.js'%>)"></script>
+	<script type="text/javascript" src="@request(<%'/static/lib/echarts/echarts.themez.js'%>)"></script>
+</head>
+
+<body class="console console1 ok-body-scroll">
+	<div class="ok-body home">
+		<div class="layui-row layui-col-space15">
+			<div class="layui-col-xs6 layui-col-md3">
+				<div class="ok-card layui-card">
+					<div class="ok-card-body p0 clearfix cart-data">
+						<div class="data-body">
+							<div class="media-cont">
+								<p class="tit">收入</p>
+								<h5 class="num">0</h5>
+							</div>
+							<div class="w-img" ok-pc-in-show>
+								<img src="@request(<%'/static/images/home-01.png'%>)" alt="收入" />
+							</div>
+						</div>
+						<div id="echIncome" class="line-home-a"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="layui-col-xs6 layui-col-md3">
+				<div class="ok-card layui-card">
+					<div class="ok-card-body p0 clearfix cart-data">
+						<div class="data-body">
+							<div class="media-cont">
+								<p class="tit">商品</p>
+								<h5 class="num">0</h5>
+							</div>
+							<div class="w-img" ok-pc-in-show>
+								<img src="@request(<%'/static/images/home-02.png'%>)" alt="商品" />
+							</div>
+						</div>
+						<div id="echGoods" class="line-home-a"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="layui-col-xs6 layui-col-md3">
+				<div class="ok-card layui-card">
+					<div class="ok-card-body p0 clearfix cart-data">
+						<div class="data-body">
+							<div class="media-cont">
+								<p class="tit">博客</p>
+								<h5 class="num">0</h5>
+							</div>
+							<div class="w-img" ok-pc-in-show>
+								<img src="@request(<%'/static/images/home-03.png'%>)" alt="博客" />
+							</div>
+						</div>
+						<div id="echBlogs" class="line-home-a"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="layui-col-xs6 layui-col-md3">
+				<div class="ok-card layui-card">
+					<div class="ok-card-body p0 clearfix cart-data">
+						<div class="data-body">
+							<div class="media-cont">
+								<p class="tit">用户</p>
+								<h5 class="num">0</h5>
+							</div>
+							<div class="w-img" ok-pc-in-show>
+								<img src="@request(<%'/static/images/home-04.png'%>)" alt="用户" />
+							</div>
+						</div>
+						<div id="echUser" class="line-home-a"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="layui-row layui-col-space15">
+			<div class="layui-col-md8">
+				<div class="layui-card">
+					<div class="layui-card-header">
+						<div class="ok-card-title">今日用户活跃量</div>
+					</div>
+					<div class="ok-card-body map-body">
+						<div style="height: 100%;" id="userActiveTodayChart"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="layui-col-md4">
+				<div class="layui-card">
+					<div class="layui-card-header">
+						<div class="ok-card-title">今日用户访问来源</div>
+					</div>
+					<div class="ok-card-body map-body">
+						<div style="height: 100%;" id="userSourceTodayChart"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="layui-row layui-col-space15">
+			<div class="layui-col-md12">
+				<div class="layui-card">
+					<div class="layui-card-header">
+						<div class="ok-card-title">本周用户访问来源</div>
+					</div>
+					<div class="ok-card-body clearfix">
+						<div class="map-china" id="userSourceWeekChart"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@require(<%'./@my-component/core/footer.html'%>, <%{}%>)
+</body>
+
+</html>

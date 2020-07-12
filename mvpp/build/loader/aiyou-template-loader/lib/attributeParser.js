@@ -18,19 +18,19 @@ var pathIsAbsolute = function (attrValue) {
 var isTemplate = function (content) {
     // Test against regex list
     var interpolateTest = _.templateSettings.interpolate.test(content);
-    
+
     if (interpolateTest) {
         _.templateSettings.interpolate.lastIndex = 0;
         return true;
     }
-    
+
     var evaluateTest = _.templateSettings.evaluate.test(content);
-    
+
     if (evaluateTest) {
         _.templateSettings.evaluate.lastIndex = 0;
         return true;
     }
-    
+
     var escapeTest = _.templateSettings.escape.test(content);
     _.templateSettings.escape.lastIndex = 0;
     return escapeTest;
@@ -50,11 +50,11 @@ var AttributeContext = function (isRelevantTagAttr, usid, root, parseDynamicRout
     this.parseDynamicRoutes = parseDynamicRoutes;
 };
 
-AttributeContext.prototype.replaceMatches = function(content) {
+AttributeContext.prototype.replaceMatches = function (content) {
     var self = this;
     content = [content];
     this.matches.reverse();
-    
+
     this.matches.forEach(function (match) {
         if (isTemplate(match.value)) {
             // Replace attribute value
@@ -104,39 +104,41 @@ AttributeContext.prototype.replaceMatches = function(content) {
 AttributeContext.prototype.resolveAttributes = function (content) {
     var regex = new RegExp('____' + this.usid + '[0-9\\.]+____', 'g');
     var self = this;
-    
+
     return content.replace(regex, function (match) {
         if (!self.data[match]) {
             return match;
         }
-        
+
         var url = self.data[match].value;
-        
+
+        console.log("######## url", url);
+
         url = JSON.stringify(url);
-        var str =  getSafeRequireStr('require(' + url +')');
-        return "'+"+str+"+'";//"'+ " + str +"+'";
+        var str = getSafeRequireStr('require(' + url + ')');
+        return "'+" + str + "+'";//"'+ " + str +"+'";
         // return "' +require("+JSON.stringify(url) +").default +'"
 
         // return "'+require("+JSON.stringify(url) +").default+'"
 
     });
 
-	/* 获取安全的require字符串 */
-	function getSafeRequireStr(str) {
-		/* 在nodejs 12.18.2 中使用这个loader时，会输出 { default: 'xxxx/img.png'} 这样一段字符串 而不是 xxxx/img.png */
-		/* 所以在这里做一下兼容的处理 */
-		/* 如果require引入的模板时有default属性时就直接使用default属性，否则直接输出引入的这个对象的值 */
+    /* 获取安全的require字符串 */
+    function getSafeRequireStr(str) {
+        /* 在nodejs 12.18.2 中使用这个loader时，会输出 { default: 'xxxx/img.png'} 这样一段字符串 而不是 xxxx/img.png */
+        /* 所以在这里做一下兼容的处理 */
+        /* 如果require引入的模板时有default属性时就直接使用default属性，否则直接输出引入的这个对象的值 */
         // return str.concat(".default || ").concat(str);
 
         return "(function () { var reqObj =" + str + "; return reqObj.default || reqObj})()";
-	}
+    }
 };
 
 // Process a tag attribute
 var processMatch = function (match, strUntilValue, name, value, index) {
     var self = this;
     var expression = value;
-    
+
     if (!this.isRelevantTagAttr(this.currentTag, name)) {
         return;
     }
@@ -148,7 +150,7 @@ var processMatch = function (match, strUntilValue, name, value, index) {
             expression = loaderUtils.urlToRequest(value, self.root);
         }
     }
-    
+
     this.matches.push({
         start: index + strUntilValue.length,
         length: value.length,
