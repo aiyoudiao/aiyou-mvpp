@@ -296,46 +296,46 @@ layui.use (
     /**
    * 捐赠作者
    */
-    $ ('.layui-footer button.donate').click (function () {
-      layer.tab ({
-        area: ['330px', '350px'],
-        tab: [
-          {
-            title: '支付宝',
-            content: '<img src=\'images/zfb.jpg\' width=\'200\' height=\'300\' style=\'margin: 0 auto; display: block;\'>'
-          },
-          {
-            title: '微信',
-            content: '<img src=\'images/wx.jpg\' width=\'200\' height=\'300\' style=\'margin: 0 auto; display: block;\'>'
-          }
-        ]
-      });
-    });
+    // $ ('.layui-footer button.donate').click (function () {
+    //   layer.tab ({
+    //     area: ['330px', '350px'],
+    //     tab: [
+    //       {
+    //         title: '支付宝',
+    //         content: '<img src=\'images/zfb.jpg\' width=\'200\' height=\'300\' style=\'margin: 0 auto; display: block;\'>'
+    //       },
+    //       {
+    //         title: '微信',
+    //         content: '<img src=\'images/wx.jpg\' width=\'200\' height=\'300\' style=\'margin: 0 auto; display: block;\'>'
+    //       }
+    //     ]
+    //   });
+    // });
 
     /**
    * QQ群交流
    */
-    $ (
-      'body'
-    ).on (
-      'click',
-      '.layui-footer button.communication, #noticeQQ',
-      function () {
-        layer.tab ({
-          area: ['auto', '370px'],
-          tab: [
-            {
-              title: 'QQ群2',
-              content: '<img src=\'images/qq2.png\' width=\'200\' height=\'300\' style=\'margin: 0 auto; display: block;\'/>'
-            },
-            {
-              title: 'QQ群1（已满）',
-              content: '<img src=\'images/qq1.png\' width=\'200\' height=\'300\' style=\'margin: 0 auto; display: block;\'/>'
-            }
-          ]
-        });
-      }
-    );
+    // $ (
+    //   'body'
+    // ).on (
+    //   'click',
+    //   '.layui-footer button.communication, #noticeQQ',
+    //   function () {
+    //     layer.tab ({
+    //       area: ['auto', '370px'],
+    //       tab: [
+    //         {
+    //           title: 'QQ群2',
+    //           content: '<img src=\'images/qq2.png\' width=\'200\' height=\'300\' style=\'margin: 0 auto; display: block;\'/>'
+    //         },
+    //         {
+    //           title: 'QQ群1（已满）',
+    //           content: '<img src=\'images/qq1.png\' width=\'200\' height=\'300\' style=\'margin: 0 auto; display: block;\'/>'
+    //         }
+    //       ]
+    //     });
+    //   }
+    // );
 
     /**
    * 弹窗皮肤
@@ -343,7 +343,7 @@ layui.use (
     $ ('#alertSkin').click (function () {
       okLayer.open (
         '皮肤动画',
-        'pages/system/alertSkin.html',
+        '/system/alertSkin.html',
         '50%',
         '45%',
         function (layero) {},
@@ -356,7 +356,7 @@ layui.use (
    */
     $ ('#logout').click (function () {
       okLayer.confirm ('确定要退出吗？', function (index) {
-        window.location = 'pages/login.html';
+        window.location = '/system/login.html';
       });
     });
 

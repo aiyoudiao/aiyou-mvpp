@@ -21,7 +21,7 @@ layui.use (['form', 'okGVerify', 'okLayer'], function () {
   /**
              * 初始化验证码
              */
-  // let verifyCode = new okGVerify("#captchaImg");
+  let verifyCode = new okGVerify("#captchaImg");
 
   /**
              * 数据校验

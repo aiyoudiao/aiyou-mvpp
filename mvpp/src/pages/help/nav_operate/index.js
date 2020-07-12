@@ -26,7 +26,7 @@ layui.use (['element', 'table', 'form', 'jquery', 'okTab', 'laydate', 'code'], f
 
   $ ('#addNav1').click (function () {
     // 方式一（推荐）
-    var url = 'pages/user/user.html';
+    var url = '/member/user.html';
     var page = '<div lay-id="add-1" data-url="' + url + '"><cite>个人中心</cite></div>';
     okTab.tabAdd (page);
   });
@@ -35,7 +35,7 @@ layui.use (['element', 'table', 'form', 'jquery', 'okTab', 'laydate', 'code'], f
     // 方式二(获取父级对象进行添加)
     var pLayui = parent.layui;// 获取父级的layui
     var pOkTab = pLayui.okTab ();// 拿到导航操作对象
-    var url = 'pages/user/user.html';
+    var url = '/member/user.html';
     var page = '<a lay-id="u-1" href="javascript:;" data-url="' + url + '"><cite>个人中心</cite><span class="layui-badge-dot"></span></a>';
     pOkTab.tabAdd (page);
   });
@@ -50,7 +50,7 @@ layui.use (['element', 'table', 'form', 'jquery', 'okTab', 'laydate', 'code'], f
     okTab.tabAdd (page);
   });
   $ ('button.param2').click (function () {
-    var url = '/pages/help/navOperate.html?param=c';
+    var url = '/help/navOperate.html?param=c';
     var page = '<div lay-id="param2" is-close="false" data-url="' + url + '">不会被关闭</div>';
     okTab.tabAdd (page);
   });
