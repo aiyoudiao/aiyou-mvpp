@@ -70,7 +70,7 @@
     "jest": "^26.1.0",
     "less": "^3.11.3",
     "less-loader": "^6.2.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "npx": "^10.2.2",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-import": "^12.0.1",
